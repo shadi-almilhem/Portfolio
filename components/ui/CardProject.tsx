@@ -28,14 +28,14 @@ export function CardProject({ src, heading, badgeText, ProjectExplain }: any) {
 					`,
         }}
       />
-      <div className="relative flex  flex-col gap-3 rounded-xl border border-white/10  p-4 ">
+      <div className="relative flex flex-col gap-3 rounded-xl border border-white/10  p-4 ">
         <div className="space-y-4 ">
           <Image
             src={src}
             alt="Product image"
-            height={10}
-            width={10}
-            className="h-52 w-full rounded-lg object-cover opacity-75"
+            height={1027}
+            width={768}
+            className="h-56 rounded-lg   bg-contain md:h-64"
           />
           <div className="flex flex-col items-start justify-between ">
             <h3 className="text-xl font-semibold text-white">{heading}</h3>

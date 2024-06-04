@@ -25,26 +25,26 @@ function Footer() {
           <div className="text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
             <Link
               href="#"
-              className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
+              className="inline-block px-6 py-2 font-normal transition hover:text-primary"
             >
               Home
             </Link>
             <Link
               href="#"
-              className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
+              className="inline-block px-6 py-2 font-normal transition hover:text-primary"
             >
               Projects
             </Link>
             <Link
               href="#"
-              className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
+              className="inline-block px-6 py-2 font-normal transition hover:text-primary"
             >
               Services
             </Link>
 
             <Link
               href="#"
-              className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
+              className="inline-block px-6 py-2 font-normal transition hover:text-primary"
             >
               Help
             </Link>

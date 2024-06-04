@@ -6,28 +6,28 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 const Card_Project = [
   {
-    imageLink: "/profileImage.webp",
+    imageLink: "/web-design-1-1024x768.jpg",
     title: "Project 1",
     badgeText: "Next.js tailwind",
     ProjectExplain:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    imageLink: "/profileImage.webp",
+    imageLink: "/Al-Hashem.webp",
     title: "Project 2",
     badgeText: "Figma",
     ProjectExplain:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    imageLink: "/profileImage.webp",
+    imageLink: "/modem-design.webp",
     title: "Project 3",
     badgeText: "Canva",
     ProjectExplain:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    imageLink: "/profileImage.webp",
+    imageLink: "/save-to-notion-website.webp",
     title: "Project 4",
     badgeText: "Next.js tailwind",
     ProjectExplain:
