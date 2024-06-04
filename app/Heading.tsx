@@ -3,6 +3,7 @@ import { Bodoni_Moda } from "next/font/google";
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
+  display: "swap",
 });
 import profileImage from "@/public/profileImage.webp";
 type HeadingProps = {
@@ -18,11 +19,10 @@ function Heading({ imagePlace }: HeadingProps) {
         <span className=" absolute   mx-2 md:-bottom-3 md:-right-28 lg:bottom-0 2xl:-right-32">
           <Image
             src={profileImage}
-            width={90}
-            height={120}
             quality={100}
+            priority={true}
             alt="Shadi image"
-            className="image-gradient-border hidden rotate-3 rounded-xl  md:flex "
+            className="image-gradient-border hidden h-auto  rotate-3  rounded-md bg-contain md:flex md:w-28  md:rounded-xl "
           />
         </span>
       )}

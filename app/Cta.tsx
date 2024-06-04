@@ -1,5 +1,6 @@
 import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/button";
+import logo from "@/public/SH-logo.svg";
 
 import { SparklesCore } from "@/components/ui/Sparkles";
 import { Mail, Rocket } from "lucide-react";
@@ -26,11 +27,10 @@ function Cta() {
         <div className="bg-purple-500  animate-rotate-glow absolute inset-0 z-10 rounded-full opacity-40"></div>
 
         <Image
-          className="z-20 "
-          src="/SH-logo.svg"
+          className="z-20 h-auto w-[200px]"
+          src={logo}
           alt="logo"
-          width={200}
-          height={200}
+          priority={true}
         />
         <div className="purple-ping  h-1/3 w-1/3"></div>
       </div>

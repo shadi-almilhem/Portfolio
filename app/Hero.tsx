@@ -9,6 +9,7 @@ import Heading from "./Heading";
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
+  display: "swap",
 });
 
 function Hero() {
@@ -19,11 +20,10 @@ function Hero() {
         <div className="flex justify-center">
           <Image
             src={profileImage}
-            width={70}
-            height={120}
             quality={100}
+            priority={true}
             alt="Shadi image"
-            className="image-gradient-border  justify-center rounded-2xl  md:hidden "
+            className="image-gradient-border h-auto w-20 justify-center  rounded-xl bg-contain  md:hidden "
           />
         </div>
 

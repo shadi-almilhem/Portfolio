@@ -90,6 +90,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
         orbit: {
           "0%": {
             transform:
@@ -122,6 +130,7 @@ const config = {
         },
       },
       animation: {
+        ripple: "ripple 3400ms ease infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine 2s linear infinite",

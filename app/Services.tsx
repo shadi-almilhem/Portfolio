@@ -45,7 +45,7 @@ function Services() {
   return (
     <section className="max-container relative mb-8 flex w-full flex-col items-center gap-16">
       <h2
-        className={`${bodoni_moda.className} lg:text-medium-52 md:text-medium-40 text-medium-32  mx-auto  italic text-white`}
+        className={`${bodoni_moda.className} mx-auto text-medium-32 italic  text-white  md:text-medium-40 lg:text-medium-52`}
       >
         My Services
       </h2>
@@ -55,12 +55,12 @@ function Services() {
         rangeY={100}
         className="flex w-full items-center justify-center"
       >
-        <div className="grid w-full grid-cols-1  gap-4 px-16 lg:grid-cols-2 lg:gap-8 lg:px-24">
+        <div className="grid  grid-cols-1 gap-4 px-16 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
           {services.map((service, index) => (
             <Link
               href="/"
               key={index}
-              className="LinkContainer  flex  flex-col items-start gap-2	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
+              className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
             >
               <div className="flex w-full  items-center justify-between">
                 <div className="flex  items-center gap-2">
@@ -76,6 +76,11 @@ function Services() {
               <p className="text-gray-700 text-base text-white/85">
                 {service.description}
               </p>
+              <span
+                className={`absolute ${bodoni_moda.className} number -bottom-4 -right-0 text-6xl text-white/5`}
+              >
+                0{index + 1}
+              </span>
             </Link>
           ))}
         </div>

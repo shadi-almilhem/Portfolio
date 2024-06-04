@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/tooltip";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Ripple from "@/components/ui/ripple";
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -109,9 +110,15 @@ function Stacks() {
                   name,
                 } = iconData[iconIndex];
                 return (
-                  <motion.div key={name} variants={itemVariants}>
+                  <motion.div
+                    key={name}
+                    variants={itemVariants}
+                    className="relative flex items-center justify-center"
+                  >
                     <Tooltip>
-                      <TooltipTrigger className="m-2 flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-t from-[#dbdbdb] to-white">
+                      <TooltipTrigger className="z-10 m-4 flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-t from-[#dbdbdb] to-white">
+                        <Ripple color={color} />
+
                         <IconComponent size={25} color={color} />
                       </TooltipTrigger>
                       <TooltipContent

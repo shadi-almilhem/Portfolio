@@ -63,6 +63,13 @@
     transform: rotate(-45deg); /* Rotate the arrow 90 degrees */
     color: #d080ff;
   }
+  .number {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(5px);
+  }
+  .LinkContainer:hover .number {
+    transform: rotate(-5deg); /* Rotate the arrow 90 degrees */
+  }
   .radial-gradient {
     background-image: radial-gradient(
       circle at center,
