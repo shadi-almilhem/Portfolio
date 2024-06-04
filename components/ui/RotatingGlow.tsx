@@ -5,7 +5,7 @@ import { SparklesCore } from "@/components/ui/Sparkles";
 
 const RotatingGlow = () => {
   return (
-    <div className="relative z-10 -my-32 flex  h-auto w-auto items-center justify-center rounded-full   py-24 ">
+    <div className="relative z-10 -my-16 flex h-[17rem] w-[17rem]  items-center justify-center rounded-full sm:h-[18rem] sm:w-[18rem] md:-my-56 md:h-[40rem]   md:w-[40rem] ">
       <SparklesCore
         background="transparent"
         particleDensity={30}
@@ -13,10 +13,10 @@ const RotatingGlow = () => {
         className="absolute h-2/3 w-2/3 overflow-hidden rounded-full "
         particleSize={0.1}
       />
-      <div className="bg-purple-500  animate-rotate-glow absolute inset-0 z-10  rounded-full opacity-40"></div>
+      <div className="  animate-rotate-glow absolute inset-0 z-10  h-[15rem] w-[15rem] rounded-full opacity-60  md:h-full md:w-full md:opacity-40"></div>
 
       <Image
-        className="z-20 h-auto w-[200px]"
+        className="z-20 h-auto w-[100px] md:w-[200px]"
         src={logo}
         alt="logo"
         priority={true}

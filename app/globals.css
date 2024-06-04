@@ -281,11 +281,11 @@
   }
 
   .purple-ping {
-    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
     border-radius: 100%;
     border: 20px double rgba(179, 42, 254, 0.3);
     position: absolute;
-    filter: blur(10px);
+    filter: blur(20px);
     width: 80%;
     height: 80%;
     content: "";
