@@ -18,10 +18,10 @@ const NavMobile: React.FC<NavMobileProps> = ({ isOpen, toggleMenu }) => {
   const ref = useRef(null);
 
   return (
-    <div ref={ref} className="z-50 md:hidden">
+    <div ref={ref} className="z-50  overflow-hidden md:hidden">
       <AnimatePresence>
         {isOpen && (
-          <motion.header
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -52,7 +52,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ isOpen, toggleMenu }) => {
                 </motion.li>
               ))}
             </ul>
-          </motion.header>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

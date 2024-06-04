@@ -79,7 +79,7 @@ function Services() {
               <span
                 className={`absolute ${bodoni_moda.className} number -bottom-4 -right-0 text-6xl text-white/5`}
               >
-                0{index + 1}
+                #{index + 1}
               </span>
             </Link>
           ))}

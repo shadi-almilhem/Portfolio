@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} flex w-full  justify-center overflow-x-hidden bg-[#101010]`}
+        className={`${nunito.className} flex w-full justify-center  overflow-x-hidden  bg-[#101010]`}
       >
         <Header />
-        <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
+        <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full overflow-x-hidden rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
         {children}
       </body>
     </html>

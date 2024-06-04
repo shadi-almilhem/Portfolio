@@ -87,7 +87,7 @@ function Stacks() {
   return (
     <section
       ref={ref}
-      className="max-container z-30 mb-8 flex w-full flex-col items-center gap-16"
+      className="max-container z-40 mb-8 flex w-full flex-col items-center gap-16"
     >
       <h2
         className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}

@@ -15,26 +15,8 @@ const badges = [
 
 function Cta() {
   return (
-    <div className="flex w-full flex-col items-center justify-center px-8">
-      <div className="relative z-10 -my-52 flex h-[40rem] w-[40rem] items-center justify-center rounded-full ">
-        <SparklesCore
-          background="transparent"
-          particleDensity={30}
-          maxSize={2}
-          className="absolute h-2/3 w-2/3 overflow-hidden rounded-full "
-          particleSize={0.1}
-        />
-        <div className="bg-purple-500  animate-rotate-glow absolute inset-0 z-10 rounded-full opacity-40"></div>
-
-        <Image
-          className="z-20 h-auto w-[200px]"
-          src={logo}
-          alt="logo"
-          priority={true}
-        />
-        <div className="purple-ping  h-1/3 w-1/3"></div>
-      </div>
-      <section className="shadow-elegant mt-52 rounded-xl bg-cta bg-cover px-4 py-10">
+    <section className="z-10 flex w-full flex-col items-center justify-center  px-8">
+      <div className="shadow-elegant  rounded-xl bg-cta bg-cover px-4 py-10">
         {/* Container */}
         <div className="mx-auto max-w-7xl px-5">
           {/* Component */}
@@ -66,8 +48,8 @@ function Cta() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

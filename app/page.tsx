@@ -6,9 +6,10 @@ import Services from "./Services";
 import Stacks from "./Stacks";
 import Footer from "./Footer";
 import Cta from "./Cta";
+import RotatingGlow from "@/components/ui/RotatingGlow";
 export default function Home() {
   return (
-    <main className="  flex w-[100%]   flex-col items-center justify-between gap-28">
+    <main className="  flex w-full  flex-col items-center justify-between gap-28 ">
       <GridPattern
         width={80}
         height={80}
@@ -22,7 +23,9 @@ export default function Home() {
       <Projects />
       <Services />
       <Stacks />
+      <RotatingGlow />
       <Cta />
+
       <Footer />
     </main>
   );
