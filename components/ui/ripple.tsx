@@ -7,7 +7,7 @@ const NUM_CIRCLES = 6;
 
 const RippleComponent = ({ color }: any) => {
   return (
-    <div className="absolute left-1/2 top-1/2 -z-10   h-full w-full overflow-visible">
+    <div className="absolute left-1/2 top-1/2 -z-10  overflow-visible">
       {Array.from({ length: NUM_CIRCLES }, (_, i) => (
         <div
           key={i}
