@@ -53,7 +53,7 @@ function Header() {
             src={logo}
             alt="logo"
             priority={true}
-            quality={10}
+            quality={1}
           />
         </div>
         <div className="">

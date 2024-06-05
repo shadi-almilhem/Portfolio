@@ -20,7 +20,7 @@ const RotatingGlow = () => {
         src={logo}
         alt="logo"
         loading="lazy"
-        quality={30}
+        quality={5}
       />
       <div className="purple-ping  h-1/3 w-1/3"></div>
     </div>

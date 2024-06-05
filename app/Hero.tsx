@@ -30,7 +30,7 @@ function Hero() {
         <div className="flex justify-center">
           <Image
             src={profileImage}
-            quality={100}
+            quality={60}
             priority={true}
             alt="Shadi image"
             className="image-gradient-border h-auto w-20 justify-center  rounded-xl bg-contain  md:hidden "
