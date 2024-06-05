@@ -55,7 +55,7 @@ function Services() {
         rangeY={100}
         className="flex w-full items-center justify-center"
       >
-        <div className="grid  grid-cols-1 gap-4 px-16 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
+        <div className="grid  grid-cols-1 gap-4 px-2 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
           {services.map((service, index) => (
             <Link
               href="/"

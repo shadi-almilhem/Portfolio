@@ -87,7 +87,7 @@ function Stacks() {
   return (
     <section
       ref={ref}
-      className="max-container z-40 mb-8 flex w-full flex-col items-center gap-16"
+      className="max-container z-40 mb-8 flex w-full flex-col items-center px-2 sm:gap-16"
     >
       <h2
         className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
@@ -96,7 +96,7 @@ function Stacks() {
       </h2>
       <TooltipProvider delayDuration={100}>
         <motion.div
-          className="flex flex-col items-center"
+          className="flex scale-[0.85] flex-col items-center sm:scale-100 "
           initial="hidden"
           animate={controls}
           variants={containerVariants}

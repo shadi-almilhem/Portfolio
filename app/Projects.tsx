@@ -20,7 +20,7 @@ const Card_Project = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    imageLink: "/modem-design.webp",
+    imageLink: "/save-to-notion.webp",
     title: "Project 3",
     badgeText: "Canva",
     ProjectExplain:
@@ -41,14 +41,14 @@ const bodoni_moda = Bodoni_Moda({
 });
 function Projects() {
   return (
-    <section className=" max-container mb-8  flex w-full flex-col items-center  gap-16  ">
+    <section className="max-container from-gray-500/5 relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t  to-transparent p-8">
       <h2
-        className={`${bodoni_moda.className}  mx-auto text-medium-32 italic text-white md:text-medium-40    lg:text-medium-52`}
+        className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
       >
         My Projects
       </h2>
       <div className="flex flex-col items-center gap-8">
-        <div className="grid-col-1 grid justify-items-center     gap-8 lg:grid-cols-2 lg:grid-rows-2">
+        <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
           {Card_Project.map((card) => (
             <CardProject
               key={card.title}
@@ -61,7 +61,7 @@ function Projects() {
         </div>
         <Button
           variant="secondary"
-          className="gradient-s-button w-full rounded-full px-3  text-white md:w-fit  md:px-5 md:py-5"
+          className="gradient-s-button w-full rounded-full px-3 text-white md:w-fit md:px-5 md:py-5"
         >
           <Link
             className="medium-12 md:medium-14 lg:medium-16"

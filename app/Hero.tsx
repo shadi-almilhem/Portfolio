@@ -6,6 +6,7 @@ import React from "react";
 import { Bodoni_Moda } from "next/font/google";
 import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
+import { Spotlight } from "@/components/ui/Spotlight";
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
@@ -15,6 +16,15 @@ const bodoni_moda = Bodoni_Moda({
 function Hero() {
   return (
     <section className=" max-container relative    z-40 mt-44 flex w-full  flex-col flex-wrap items-center gap-6 sm:mt-48 md:mt-56 md:gap-8 lg:mt-60">
+      <Spotlight
+        className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"
+        fill="white"
+      />
+
+      <Spotlight
+        className="  top-36 h-screen  w-full md:-top-0"
+        fill="#c354ff"
+      />
       <div className="stars z-[-5]"></div>
       <div className="flex flex-col flex-nowrap gap-8 text-center">
         <div className="flex justify-center">
