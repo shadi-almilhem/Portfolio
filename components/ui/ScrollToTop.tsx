@@ -1,24 +1,22 @@
-// components/ScrollToTop.js
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+import { throttle } from "lodash";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (scrollY > 2000) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const toggleVisibility = throttle(() => {
+      setIsVisible(window.scrollY > 2000);
+    }, 100);
+
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+
+    return () => {
+      toggleVisibility.cancel();
+      window.removeEventListener("scroll", toggleVisibility);
     };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
