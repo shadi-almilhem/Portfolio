@@ -151,7 +151,6 @@ const config = {
         backgroundPositionSpin:
           "background-position-spin 3000ms infinite alternate",
       },
-      backgroundImage: { cta: "url('/bg-cta.webp')" },
     },
   },
   plugins: [

@@ -279,7 +279,14 @@
       opacity: 0;
     }
   }
-
+  .test-bg {
+    background: radial-gradient(
+      circle,
+      rgba(128, 0, 128, 1) 0%,
+      rgba(138, 43, 226, 1) 50%,
+      rgba(75, 0, 130, 1) 100%
+    );
+  }
   .purple-ping {
     animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
     border-radius: 100%;

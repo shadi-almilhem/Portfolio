@@ -7,6 +7,7 @@ import { Mail, Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import backgroundImage from "@/public/bg-cta.webp";
 const badges = [
   { text: "24h Reply Promise" },
   { text: "Rapid Quality Work" },
@@ -16,7 +17,14 @@ const badges = [
 function Cta() {
   return (
     <section className="z-10 flex w-full flex-col items-center justify-center  px-8">
-      <div className="shadow-elegant  rounded-xl bg-cta bg-cover px-4 py-10">
+      <div className="shadow-elegant relative  rounded-xl     bg-cover px-4 py-10">
+        <Image
+          src={backgroundImage}
+          alt="div background"
+          className="absolute left-0 top-0 -z-10 h-full w-full rounded-xl object-cover"
+          loading="lazy"
+          quality={100}
+        />
         {/* Container */}
         <div className="mx-auto max-w-7xl px-5">
           {/* Component */}
