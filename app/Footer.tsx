@@ -4,7 +4,6 @@ import React from "react";
 import Heading from "./Heading";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Spline from "@splinetool/react-spline/next";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const NAV_LINKS = [

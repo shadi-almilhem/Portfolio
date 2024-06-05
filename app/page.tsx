@@ -1,5 +1,4 @@
 import { GridPattern } from "@/components/ui/GridPattern";
-import Spline from "@splinetool/react-spline/next";
 
 import Hero from "./Hero";
 import Projects from "./Projects";

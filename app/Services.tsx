@@ -14,6 +14,7 @@ const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
+  fallback: ["Arial", "Times New Roman"],
 });
 
 const services = [

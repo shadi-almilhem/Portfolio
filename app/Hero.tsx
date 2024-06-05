@@ -11,6 +11,7 @@ const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
+  fallback: ["Arial", "Times New Roman"],
 });
 
 function Hero() {
@@ -30,7 +31,7 @@ function Hero() {
         <div className="flex justify-center">
           <Image
             src={profileImage}
-            quality={60}
+            quality={40}
             priority={true}
             alt="Shadi image"
             className="image-gradient-border h-auto w-20 justify-center  rounded-xl bg-contain  md:hidden "
