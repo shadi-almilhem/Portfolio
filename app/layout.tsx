@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
-import { Raleway } from "next/font/google";
 import { Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -22,10 +20,10 @@ export default function RootLayout({
       <body
         className={`${nunito.className} flex w-full justify-center  overflow-x-hidden  bg-[#101010]`}
       >
-        <Analytics />
         <Header />
         <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full overflow-x-hidden rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
