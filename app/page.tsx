@@ -26,9 +26,6 @@ export default function Home() {
       <Stacks />
 
       <RotatingGlow />
-      <Cta />
-
-      <Footer />
     </main>
   );
 }

@@ -42,7 +42,7 @@ const bodoni_moda = Bodoni_Moda({
 });
 function Projects() {
   return (
-    <section className="max-container from-gray-500/5 relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t  to-transparent p-8">
+    <section className="max-container relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t from-gray-500/5 via-purple-500/5  to-transparent p-8">
       <h2
         className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
       >

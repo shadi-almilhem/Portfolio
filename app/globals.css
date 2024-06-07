@@ -7,7 +7,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #313131;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #313131 inset;
+  box-shadow: 0 0 0px 1000px #313131 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  color: white;
+}
 @media (min-width: 768px) {
   /* Adjust the min-width value based on the 'md' breakpoint you've set in Tailwind CSS */
 }
@@ -106,7 +122,7 @@
   }
   .shadow-elegant {
     box-shadow:
-      rgba(0, 0, 0, 0.6) 0px 0px 50px 20px inset,
+      #101010 0px 0px 80px 30px inset,
       rgba(255, 255, 255, 0.05) 0px 10px 100px -10px;
   }
   .gradient-full {
@@ -191,37 +207,37 @@
   }
 
   .medium-52 {
-    @apply text-[52px] font-[500] leading-[120%];
+    @apply text-[52px] font-[500] leading-[130%];
   }
 
   .medium-40 {
-    @apply text-[40px] font-[500] leading-[120%];
+    @apply text-[40px] font-[500] leading-[130%];
   }
 
   .medium-32 {
-    @apply text-[32px] font-[500] leading-[120%];
+    @apply text-[32px] font-[500] leading-[130%];
   }
   .medium-20 {
     @apply text-[20px] font-[600];
   }
   .bold-88 {
-    @apply text-[88px] font-[700] leading-[120%];
+    @apply text-[88px] font-[700] leading-[130%];
   }
 
   .bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
+    @apply text-[64px] font-[700] leading-[130%];
   }
 
   .bold-52 {
-    @apply text-[52px] font-[700] leading-[120%];
+    @apply text-[52px] font-[700] leading-[130%];
   }
 
   .bold-40 {
-    @apply text-[40px] font-[700] leading-[120%];
+    @apply text-[40px] font-[700] leading-[130%];
   }
 
   .bold-32 {
-    @apply text-[32px] font-[500] leading-[120%];
+    @apply text-[32px] font-[500] leading-[130%];
   }
 
   .bold-20 {
@@ -233,7 +249,7 @@
   }
 
   .bold-16 {
-    @apply text-[16px] font-[500];
+    @apply text-[16px] font-[600];
   }
   .bold-14 {
     @apply text-[14px] font-[500];

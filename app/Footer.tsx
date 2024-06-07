@@ -14,8 +14,8 @@ const NAV_LINKS = [
 
 function Footer() {
   return (
-    <footer className=" relative flex flex-col items-center justify-center  bg-center pb-32 text-white">
-      <div className="z-50 mx-auto mt-16 h-full w-full max-w-7xl px-5 ">
+    <footer className="relative flex  h-full w-full flex-col items-center justify-center overflow-hidden    bg-center  text-white">
+      <div className="z-50 mx-auto mt-16 h-full w-full max-w-7xl px-5 pt-20 ">
         <div className="flex flex-col items-center gap-4">
           <div className="">
             <Heading imagePlace={false} />
@@ -66,6 +66,7 @@ function Footer() {
         </div>
       </div>
       <ScrollToTop />
+      <div className="radial-gradient absolute bottom-[-35rem] -z-30 h-[30rem]  w-full  rounded-full  blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
     </footer>
   );
 }

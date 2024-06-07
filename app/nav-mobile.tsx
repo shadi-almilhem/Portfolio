@@ -46,6 +46,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ isOpen, toggleMenu }) => {
                     onClick={toggleMenu}
                     className=" flex w-full items-center justify-between p-5 text-white/90 hover:text-white"
                     href={link.link}
+                    prefetch={true}
                   >
                     <span className="flex gap-1 text-lg">{link.name}</span>
                   </Link>

@@ -16,12 +16,12 @@ const badges = [
 
 function Cta() {
   return (
-    <section className="z-10 flex w-full flex-col items-center justify-center  px-8">
+    <section className="z-10 mt-32 flex w-full flex-col items-center justify-center  px-8">
       <div className="shadow-elegant relative  rounded-xl     bg-cover px-4 py-10">
         <Image
           src={backgroundImage}
           alt="div background"
-          className="absolute left-0 top-0 -z-10 h-full w-full rounded-xl object-cover"
+          className="absolute left-0  top-0 -z-10 h-full w-full rounded-xl object-cover opacity-65"
           loading="lazy"
           quality={100}
         />
@@ -29,7 +29,7 @@ function Cta() {
         <div className="mx-auto max-w-7xl px-5">
           {/* Component */}
           <div className="mx-auto w-full rounded-[60px] px-4">
-            <div className="mx-auto w-full max-w-3xl text-center max-[479px]:px-2">
+            <div className="mx-auto flex w-full max-w-3xl flex-col text-center max-[479px]:px-2">
               <h2 className="my-8 px-4 text-2xl font-extrabold text-white sm:px-10 sm:text-3xl md:px-20 md:text-5xl md:leading-[4rem] lg:px-24">
                 Transform Your Vision into Reality
                 <span className="inline-block align-middle">
@@ -40,11 +40,7 @@ function Cta() {
               {/* Features */}
               <div className="mx-auto mb-6 flex max-w-[640px] flex-col items-center justify-center gap-4 sm:flex-row md:mb-10 md:gap-8 lg:mb-12">
                 {badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    text={badge.text}
-                    color="rgba(236, 254, 42, 0.9)"
-                  />
+                  <Badge key={index} text={badge.text} color="white" />
                 ))}
               </div>
               <Button className="gradient-button bold-16 w-[80%] rounded-full text-white sm:w-fit md:px-8 md:py-5">

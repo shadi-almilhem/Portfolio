@@ -56,7 +56,7 @@ function Hero() {
       </p>
       <div className="flex w-[100%]  flex-col items-center gap-2 md:w-min  md:flex-row md:gap-6">
         <Button className="gradient-button bold-16 w-[80%] rounded-full   text-white sm:w-fit md:px-8 md:py-5">
-          <Link className="medium-14 md:medium-16 lg:medium-18" href="/">
+          <Link className="medium-14 md:medium-16 lg:medium-18" href="/contact">
             Get in Touch
           </Link>
           <Mail className="ml-2 h-4 w-4 " />

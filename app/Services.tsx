@@ -59,7 +59,7 @@ function Services() {
         <div className="grid  grid-cols-1 gap-4 px-2 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
           {services.map((service, index) => (
             <Link
-              href="/"
+              href="/contact"
               key={index}
               className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
             >
@@ -74,7 +74,7 @@ function Services() {
                 </div>
                 <ArrowRight className="arrow " size="22px" strokeWidth={1.5} />
               </div>
-              <p className="text-gray-700 text-base text-white/85">
+              <p className="text-base text-gray-700 text-white/85">
                 {service.description}
               </p>
               <span
