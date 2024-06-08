@@ -1,3 +1,4 @@
+// File: pages/ProjectsShow.js
 "use client";
 import { Button } from "@/components/ui/button";
 import { CardProject } from "@/components/ui/CardProject";
@@ -5,6 +6,7 @@ import { Spotlight } from "@/components/ui/Spotlight";
 import { Bodoni_Moda } from "next/font/google";
 import React, { useEffect, useState } from "react";
 import { useProjectContext } from "./ProjectContext";
+import SkeletonCard from "@/components/ui/SkeletonCard"; // Ensure this import is correct
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -18,20 +20,24 @@ interface Project {
   imageLink: string;
   badgeText: string;
   projectExplain: string;
-  // ... any other properties of a project
 }
 
 function ProjectsShow() {
   const { projects, fetchProjects } = useProjectContext();
   const [visibleProjects, setVisibleProjects] = useState<Project[]>([]);
   const [offset, setOffset] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (projects.length === 0) {
-      fetchProjects(0);
-    }
-    setVisibleProjects(projects.slice(0, offset + 10));
+    const loadProjects = async () => {
+      setLoading(true);
+      if (projects.length === 0) {
+        await fetchProjects(0);
+      }
+      setVisibleProjects(projects.slice(0, offset + 10));
+      setLoading(false);
+    };
+    loadProjects();
   }, [projects, offset, fetchProjects]);
 
   const handleSeeMore = async () => {
@@ -56,15 +62,24 @@ function ProjectsShow() {
       </h2>
       <div className="flex flex-col items-center gap-8">
         <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
-          {visibleProjects.map((project) => (
-            <CardProject
-              key={project.title}
-              src={project.imageLink}
-              heading={project.title}
-              badgeText={project.badgeText}
-              ProjectExplain={project.projectExplain}
-            />
-          ))}
+          {loading ? (
+            <>
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+              <SkeletonCard />
+            </>
+          ) : (
+            visibleProjects.map((project) => (
+              <CardProject
+                key={project.title}
+                src={project.imageLink}
+                heading={project.title}
+                badgeText={project.badgeText}
+                ProjectExplain={project.projectExplain}
+              />
+            ))
+          )}
         </div>
         {loading ? (
           <p className="text-white">Loading...</p>

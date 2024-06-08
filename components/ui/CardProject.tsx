@@ -15,6 +15,7 @@ export function CardProject({ src, heading, badgeText, ProjectExplain }: any) {
             alt="Product image"
             height={1027}
             width={768}
+            priority={true}
             className="h-60 rounded-lg bg-contain md:h-64"
           />
           <div className="flex flex-col items-start justify-between">
