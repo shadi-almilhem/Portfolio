@@ -16,7 +16,7 @@ const RotatingGlow = () => {
       <div className="  animate-rotate-glow absolute inset-0 z-10  h-[15rem] w-[15rem] rounded-full opacity-60  md:h-full md:w-full md:opacity-40"></div>
 
       <Image
-        className="z-20 h-auto w-[100px]   rounded-full border-8 border-primary/50 md:w-[200px]"
+        className="z-20 h-auto w-[100px]   rounded-full  border-4 border-primary/50 md:w-[200px] md:border-8"
         src={logo}
         alt="logo"
         loading="lazy"
