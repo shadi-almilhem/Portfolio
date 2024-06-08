@@ -26,7 +26,7 @@ function Hero() {
         className="  top-36 h-screen  w-full md:-top-0"
         fill="#c354ff"
       />
-      <div className="stars z-[-5]"></div>
+      <div className="sm:stars z-[-5]"></div>
       <div className="flex flex-col flex-nowrap gap-8 text-center">
         <div className="flex justify-center">
           <Image

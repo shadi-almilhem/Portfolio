@@ -28,7 +28,7 @@ export function CardProject({ src, heading, badgeText, ProjectExplain }: any) {
             href={src}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white/80"
+            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold uppercase text-black duration-300 hover:bg-white"
           >
             Open
           </Link>

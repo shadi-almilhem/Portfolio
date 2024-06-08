@@ -19,11 +19,9 @@ const NAV_LINKS = [
 function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const logoRef = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const router = usePathname();
-  console.log(router);
   const [activeLink, setActiveLink] = useState(router);
 
   useEffect(() => {

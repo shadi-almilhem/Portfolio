@@ -9,8 +9,13 @@ import {
   FaStripeS,
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiSupabaseFill } from "react-icons/ri";
-import { SiNextdotjs, SiClerk, SiCanva, SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiClerk,
+  SiCanva,
+  SiJavascript,
+  SiTypescript,
+} from "react-icons/si";
 import { PiFramerLogoFill } from "react-icons/pi";
 import { TbSeo, TbBrandFramerMotion } from "react-icons/tb";
 import {
@@ -19,8 +24,9 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
 import Ripple from "@/components/ui/ripple";
 
 const bodoni_moda = Bodoni_Moda({
@@ -62,7 +68,7 @@ const rows = [
 function Stacks() {
   const controls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -75,7 +81,9 @@ function Stacks() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.3,
+        duration: 0.8,
+        ease: [0.42, 0, 0.58, 1], // Cubic Bezier for smoother animation
       },
     },
   };
@@ -97,7 +105,7 @@ function Stacks() {
       </h2>
       <TooltipProvider delayDuration={100}>
         <motion.div
-          className="flex scale-[0.85] flex-col items-center sm:scale-100 "
+          className="flex scale-[0.85] flex-col items-center sm:scale-100"
           initial="hidden"
           animate={controls}
           variants={containerVariants}
@@ -119,14 +127,13 @@ function Stacks() {
                     <Tooltip>
                       <TooltipTrigger className="z-10 m-4 flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-t from-[#dbdbdb] to-white">
                         <Ripple color={color} />
-
                         <IconComponent size={25} color={color} />
                       </TooltipTrigger>
                       <TooltipContent
                         sideOffset={5}
                         className="rounded-full border-0 bg-gradient-to-t from-[#e7e7e7] to-white text-xs tracking-wide shadow-lg"
                       >
-                        <p className="font-semibold " style={{ color }}>
+                        <p className="font-semibold" style={{ color }}>
                           {name}
                         </p>
                       </TooltipContent>

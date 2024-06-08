@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 
 // Modify these
 const MAIN_CIRCLE_SIZE = 30;
-const MAIN_CIRCLE_OPACITY = 0.04;
+const MAIN_CIRCLE_OPACITY = 0.05;
 const NUM_CIRCLES = 6;
 
 const RippleComponent = ({ color }: any) => {
@@ -11,7 +11,7 @@ const RippleComponent = ({ color }: any) => {
       {Array.from({ length: NUM_CIRCLES }, (_, i) => (
         <div
           key={i}
-          className={`animate-ripple absolute -translate-x-1/2 -translate-y-1/2 rounded-full `}
+          className={`absolute -translate-x-1/2 -translate-y-1/2 animate-ripple rounded-full `}
           style={{
             width: MAIN_CIRCLE_SIZE + i * 10,
             height: MAIN_CIRCLE_SIZE + i * 10,

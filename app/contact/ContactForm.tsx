@@ -15,6 +15,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"; // Assuming you have a Textarea component
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
+import { Calendar, Mail } from "lucide-react";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -67,13 +70,37 @@ function ContactForm() {
   }
 
   return (
-    <div className="z-50 w-full px-8 md:w-2/3 lg:w-1/2">
+    <div className="z-50 flex w-full flex-col gap-4 px-8 md:w-2/3 lg:w-1/2">
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <Button className=" rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+          <Link
+            className="flex items-center gap-2 font-bold uppercase  "
+            href="https://cal.com/shadi-al-milhem"
+          >
+            Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
+          </Link>
+        </Button>
+        <Button className="    rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+          <Link
+            className="flex items-center gap-2 font-bold uppercase"
+            href="https://cal.com/shadi-al-milhem"
+          >
+            Schedule a call{" "}
+            <Calendar strokeWidth={2.5} className="h-auto w-4 self-start " />
+          </Link>
+        </Button>
+      </div>
+      <div className="flex w-full items-center justify-center overflow-hidden">
+        <Separator className="h-[1px] rounded-full bg-white  " />
+        <p className="p-2 text-lg text-white">OR</p>
+        <Separator className="h-[1px] rounded-full bg-white  " />
+      </div>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 rounded-lg border-[1px] border-white/15 bg-[#101010]/95 p-8"
+          className="space-y-8 rounded-lg border-[1px] border-white/15 bg-[#101010]/50 p-8 backdrop-blur-xl"
         >
-          <div className="flex flex-col gap-2 md:flex-row">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-2">
             <FormField
               control={form.control}
               name="name"
@@ -129,7 +156,7 @@ function ContactForm() {
           />
 
           <Button
-            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white/80"
+            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold  uppercase text-black duration-300 hover:bg-white"
             type="submit"
           >
             Send
