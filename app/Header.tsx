@@ -51,7 +51,7 @@ function Header() {
       >
         <div
           ref={logoRef}
-          className="h-[50px] w-[50px] overflow-hidden rounded-full border-2 border-primary/50"
+          className="h-[50px] w-[50px] overflow-hidden   rounded-full border-2 border-primary/50"
         >
           <Image
             className=" -rotate-[18deg]"

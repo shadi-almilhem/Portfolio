@@ -75,7 +75,7 @@ function ContactForm() {
         <Button className=" rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
           <Link
             className="flex items-center gap-2 font-bold uppercase  "
-            href="https://cal.com/shadi-al-milhem"
+            href="mailto:almilhemshadi@gmail.com"
           >
             Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
           </Link>
