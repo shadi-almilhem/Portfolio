@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "@/public/SH-logo.svg";
+import logo from "@/public/SH-logo.png";
 import { SparklesCore } from "@/components/ui/Sparkles";
 
 const RotatingGlow = () => {
@@ -16,11 +16,11 @@ const RotatingGlow = () => {
       <div className="  animate-rotate-glow absolute inset-0 z-10  h-[15rem] w-[15rem] rounded-full opacity-60  md:h-full md:w-full md:opacity-40"></div>
 
       <Image
-        className="z-20 h-auto w-[100px] md:w-[200px]"
+        className="z-20 h-auto w-[100px]   rounded-full border-8 border-primary/50 md:w-[200px]"
         src={logo}
         alt="logo"
         loading="lazy"
-        quality={5}
+        quality={80}
       />
       <div className="purple-ping  h-1/3 w-1/3"></div>
     </div>

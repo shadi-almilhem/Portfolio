@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
-import logo from "@/public/SH-logo.svg";
+import logo from "@/public/SH-logo.png";
 import useRotateOnScroll from "@/components/hooks/useRotateOnScroll";
 import NavMobile from "@/app/nav-mobile";
 import { usePathname } from "next/navigation";
@@ -49,13 +49,16 @@ function Header() {
         transition={{ duration: 0.4, ease: "easeInOut", delay: 0.2 }}
         className="flexBetween fixed top-0  z-50 mx-auto block w-full  max-w-screen-xl  items-center gap-2 rounded-md bg-transparent px-8 py-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] backdrop-blur-md sm:gap-8 md:mt-8 md:w-fit md:rounded-full md:border-2 md:border-white/20 md:px-4 md:py-[2px] md:pl-1 md:pr-2 md:shadow-none lg:w-fit"
       >
-        <div ref={logoRef}>
+        <div
+          ref={logoRef}
+          className="h-[50px] w-[50px] overflow-hidden rounded-full border-2 border-primary/50"
+        >
           <Image
-            className="h-[50px] w-[50px] -rotate-[18deg]"
+            className=" -rotate-[18deg]"
             src={logo}
             alt="logo"
             priority={true}
-            quality={1}
+            quality={30}
           />
         </div>
         <div className="">

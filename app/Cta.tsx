@@ -1,8 +1,6 @@
 import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/button";
-import logo from "@/public/SH-logo.svg";
 
-import { SparklesCore } from "@/components/ui/Sparkles";
 import { Mail, Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +21,7 @@ function Cta() {
           alt="div background"
           className="absolute left-0  top-0 -z-10 h-full w-full rounded-xl object-cover opacity-65"
           loading="lazy"
-          quality={100}
+          quality={50}
         />
         {/* Container */}
         <div className="mx-auto max-w-7xl px-5">
