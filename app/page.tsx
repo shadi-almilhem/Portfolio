@@ -8,6 +8,7 @@ import Stacks from "./Stacks";
 import Footer from "./Footer";
 import Cta from "./Cta";
 import RotatingGlow from "@/components/ui/RotatingGlow";
+import AboutMe from "./AboutMe";
 export default function Home() {
   return (
     <main className="  flex w-full  flex-col items-center justify-between gap-28 ">
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Services />
+      <AboutMe />
       <Stacks />
 
       <RotatingGlow />

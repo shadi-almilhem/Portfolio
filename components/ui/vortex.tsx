@@ -261,12 +261,7 @@ export const Vortex = (props: VortexProps) => {
   }, [resize, setup]);
 
   return (
-    <div
-      className={cn(
-        "relative h-full w-full overflow-hidden",
-        props.containerClassName,
-      )}
-    >
+    <div className={cn("relative h-full w-full ", props.containerClassName)}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
