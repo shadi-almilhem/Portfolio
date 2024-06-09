@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
@@ -7,6 +8,8 @@ import { Bodoni_Moda } from "next/font/google";
 import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { motion } from "framer-motion"; // Import framer-motion
+
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
@@ -15,64 +18,93 @@ const bodoni_moda = Bodoni_Moda({
   adjustFontFallback: false,
 });
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 function Hero() {
   return (
-    <section className=" max-container relative    z-40 mt-44 flex w-full  flex-col flex-wrap items-center gap-6 sm:mt-48 md:mt-56 md:gap-8 lg:mt-60">
+    <motion.section
+      className="max-container relative z-40 mt-44 flex w-full flex-col flex-wrap items-center gap-6 sm:mt-48 md:mt-56 md:gap-8 lg:mt-60"
+      initial="hidden"
+      animate="visible"
+      transition={{ staggerChildren: 1 }}
+    >
       <Spotlight
         className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"
         fill="white"
       />
 
-      <Spotlight
-        className="  top-36 h-screen  w-full md:-top-0"
-        fill="#c354ff"
-      />
+      <Spotlight className="top-36 h-screen w-full md:-top-0" fill="#c354ff" />
+
       <div className="sm:stars z-[-5]"></div>
-      <div className="flex flex-col flex-nowrap gap-8 text-center">
-        <div className="flex justify-center">
+
+      <motion.div
+        variants={fadeIn}
+        className="flex flex-col flex-nowrap gap-8 text-center"
+      >
+        <motion.div className="flex justify-center">
           <Image
             src={profileImage}
             quality={40}
             priority={true}
             alt="Shadi image"
-            className="image-gradient-border h-auto w-20 justify-center  rounded-xl bg-contain  md:hidden "
+            className="image-gradient-border h-auto w-20 justify-center rounded-xl bg-contain md:hidden"
           />
-        </div>
+        </motion.div>
 
         <Heading imagePlace={true} />
-      </div>
-      <h2 className="lg:medium-52 md:medium-40 medium-32 gradient-p mx-auto px-4 text-center   ">
+      </motion.div>
+
+      <motion.h2
+        variants={fadeIn}
+        className="lg:medium-52 md:medium-40 medium-32 gradient-p mx-auto px-4 text-center"
+      >
         <span className={`${bodoni_moda.className} gradient-p italic`}>
           Your Favorite
         </span>
         <br /> Front-End Developer
-      </h2>
-      <p className="lg:regular-24 md:regular-20 regular-16 mx-8  text-wrap  text-center text-white/80 lg:w-[26rem]">
+      </motion.h2>
+
+      <motion.p
+        variants={fadeIn}
+        className="lg:regular-24 md:regular-20 regular-16 mx-8 text-wrap text-center text-white/80 lg:w-[26rem]"
+      >
         With 3 years experience.
         <br /> Crafting
         <span className={`text-glow gradient-text px-2 font-black italic`}>
           unforgettable
         </span>
         websites for your online identity.
-      </p>
-      <div className="flex w-[100%]  flex-col items-center gap-2 md:w-min  md:flex-row md:gap-6">
-        <Button className="gradient-button bold-16 w-[80%] rounded-full   text-white sm:w-fit md:px-8 md:py-5">
-          <Link className="medium-14 md:medium-16 lg:medium-18" href="/contact">
-            Get in Touch
-          </Link>
-          <Mail className="ml-2 h-4 w-4 " />
-        </Button>
-        <Button
-          variant="secondary"
-          className="gradient-s-button w-[80%] rounded-full px-3  text-white sm:w-fit  md:px-5 md:py-5"
+      </motion.p>
+
+      <motion.div
+        variants={fadeIn}
+        className="flex w-[100%] flex-col items-center gap-6 md:w-min md:flex-row md:gap-6"
+      >
+        <Link
+          className="medium-14 md:medium-16 lg:medium-18 w-[80%]"
+          href="/contact"
         >
-          <Link className="medium-12 md:medium-14 lg:medium-16" href="/">
-            Download CV
-          </Link>
-          <Download className="ml-2 h-4 w-4" />
-        </Button>
-      </div>
-    </section>
+          <Button className="gradient-button bold-16 w-full rounded-full text-white md:px-8 md:py-5">
+            Get in Touch <Mail className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+
+        <Link
+          className="medium-12 md:medium-14 lg:medium-16 w-[80%] md:w-fit"
+          href="/"
+        >
+          <Button
+            variant="secondary"
+            className="gradient-s-button w-full rounded-full px-3 text-white md:px-5 md:py-5"
+          >
+            Download CV <Download className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      </motion.div>
+    </motion.section>
   );
 }
 

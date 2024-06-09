@@ -2,6 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
   { name: "Home", link: "/" },
@@ -26,7 +27,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ isOpen, toggleMenu }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed left-0 right-0 top-[4rem] z-50 border-b border-b-white/20 bg-transparent p-3 backdrop-blur-lg"
+            className="fixed left-0 right-0 top-[4.8rem] z-50 border-b border-b-white/20 bg-transparent p-3 backdrop-blur-lg"
           >
             <ul className="z-50 grid gap-2">
               {NAV_LINKS.map((link, index) => (

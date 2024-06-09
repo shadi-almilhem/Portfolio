@@ -1,3 +1,4 @@
+"use client";
 import GridPattern from "@/components/ui/GridPattern";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { cn } from "@/lib/utils";

@@ -4,6 +4,7 @@ import { Bodoni_Moda } from "next/font/google";
 import { CardProject } from "@/components/ui/CardProject";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
 const Card_Project = [
   {
     imageLink: "/web-design-1-1024x768.jpg",

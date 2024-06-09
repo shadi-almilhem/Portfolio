@@ -119,7 +119,7 @@ function ServicesCards() {
       </div>
       <Particles
         className="absolute inset-0 -z-10"
-        quantity={100}
+        quantity={200}
         ease={80}
         color={"#ffffff"}
         refresh

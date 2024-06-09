@@ -72,7 +72,7 @@ function ContactForm() {
   return (
     <div className="z-50 flex w-full flex-col gap-4 px-8 md:w-2/3 lg:w-1/2">
       <div className="flex flex-col gap-4 sm:flex-row">
-        <Button className=" rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+        <Button className=" rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
           <Link
             className="flex items-center gap-2 font-bold uppercase  "
             href="mailto:almilhemshadi@gmail.com"
@@ -80,7 +80,7 @@ function ContactForm() {
             Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
           </Link>
         </Button>
-        <Button className="    rounded-md bg-white/90 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+        <Button className="    rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
           <Link
             className="flex items-center gap-2 font-bold uppercase"
             href="https://cal.com/shadi-al-milhem"
@@ -106,7 +106,7 @@ function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel className="text-white">Name</FormLabel>
+                  <FormLabel className="text-base text-white">Name</FormLabel>
                   <FormControl>
                     <Input
                       className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:text-white/60 autofill:!bg-[#282828]"
@@ -123,7 +123,7 @@ function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel className="text-white">Email</FormLabel>
+                  <FormLabel className="text-base text-white">Email</FormLabel>
                   <FormControl>
                     <Input
                       className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:text-white/60 autofill:bg-[#282828]"
@@ -142,7 +142,7 @@ function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Message</FormLabel>
+                <FormLabel className="text-base text-white">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:tracking-wider placeholder:text-white/60 autofill:bg-[#282828]"
