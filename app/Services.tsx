@@ -9,12 +9,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
-import { Vortex } from "@/components/ui/vortex";
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
+  adjustFontFallback: false,
 });
 
 const services = [

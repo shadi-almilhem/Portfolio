@@ -1,4 +1,3 @@
-import { Vortex } from "@/components/ui/vortex";
 import {
   ArrowRight,
   Check,
@@ -10,11 +9,14 @@ import {
 import { Bodoni_Moda } from "next/font/google";
 import Link from "next/link";
 import React from "react";
+import Particles from "@/components/ui/particles";
+
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
+  adjustFontFallback: false,
 });
 const services = [
   {
@@ -75,55 +77,53 @@ function ServicesCards() {
       >
         My Services
       </h2>
-      <Vortex
-        backgroundColor="transparent"
-        particleCount={50}
-        rangeY={100}
-        className="flex w-full items-center justify-center"
-      >
-        <div className="grid  grid-cols-1 gap-4 px-8 md:w-4/5 md:px-32 lg:grid-cols-2  lg:gap-8 lg:px-44 ">
-          {services.map((service, index) => (
-            <Link
-              href="/contact"
-              key={index}
-              className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
-            >
-              <div className="flex w-full  items-center justify-between">
-                <div className="flex  items-center gap-2">
-                  <div className={`gradient-bg rounded-md  p-2 `}>
-                    {service.icon}
-                  </div>
-                  <h3 className=" text-xl font-bold text-white">
-                    {service.title}
-                  </h3>
+
+      <div className="grid  grid-cols-1 gap-4 px-8 md:w-4/5 md:px-32 lg:grid-cols-2  lg:gap-8 lg:px-44 ">
+        {services.map((service, index) => (
+          <Link
+            href="/contact"
+            key={index}
+            className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
+          >
+            <div className="flex w-full  items-center justify-between">
+              <div className="flex  items-center gap-2">
+                <div className={`gradient-bg rounded-md  p-2 `}>
+                  {service.icon}
                 </div>
-                <ArrowRight className="arrow " size="22px" strokeWidth={1.5} />
+                <h3 className=" text-xl font-bold text-white">
+                  {service.title}
+                </h3>
               </div>
-              <p className="text-base text-gray-700 text-white/85">
-                {service.description}
-              </p>
-              <ul className="mt-4 flex flex-col gap-8 text-white/85 decoration-inherit">
-                {service.details.map((detail, detailIndex) => (
-                  <li
-                    className=" flex w-full flex-row gap-2 "
-                    key={detailIndex}
-                  >
-                    <span className="w-6">
-                      <Check className=" p-1 text-primary" />
-                    </span>{" "}
-                    <p>{detail}</p>
-                  </li>
-                ))}
-              </ul>
-              <span
-                className={`absolute ${bodoni_moda.className} number -bottom-4 -right-0 text-6xl text-white/5`}
-              >
-                #{index + 1}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </Vortex>
+              <ArrowRight className="arrow " size="22px" strokeWidth={1.5} />
+            </div>
+            <p className="text-base text-gray-700 text-white/85">
+              {service.description}
+            </p>
+            <ul className="mt-4 flex flex-col gap-8 text-white/85 decoration-inherit">
+              {service.details.map((detail, detailIndex) => (
+                <li className=" flex w-full flex-row gap-2 " key={detailIndex}>
+                  <span className="w-6">
+                    <Check className=" p-1 text-primary" />
+                  </span>{" "}
+                  <p>{detail}</p>
+                </li>
+              ))}
+            </ul>
+            <span
+              className={`absolute ${bodoni_moda.className} number -bottom-4 -right-0 text-6xl text-white/5`}
+            >
+              #{index + 1}
+            </span>
+          </Link>
+        ))}
+      </div>
+      <Particles
+        className="absolute inset-0 -z-10"
+        quantity={100}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
     </section>
   );
 }

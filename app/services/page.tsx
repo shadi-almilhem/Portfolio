@@ -1,16 +1,8 @@
 import GridPattern from "@/components/ui/GridPattern";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import { Vortex } from "@/components/ui/vortex";
 import { cn } from "@/lib/utils";
-import {
-  ArrowRight,
-  CircleGauge,
-  CodeXml,
-  Paintbrush,
-  PanelsTopLeft,
-} from "lucide-react";
+
 import { Bodoni_Moda } from "next/font/google";
-import Link from "next/link";
 import React from "react";
 import ServicesCards from "./ServicesCards";
 const bodoni_moda = Bodoni_Moda({
@@ -18,6 +10,7 @@ const bodoni_moda = Bodoni_Moda({
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
+  adjustFontFallback: false,
 });
 
 function page() {
