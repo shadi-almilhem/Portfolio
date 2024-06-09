@@ -23,44 +23,37 @@ function Footer() {
 
           <div className="flex flex-wrap justify-center text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
             <Link
-              href="#"
+              href="/"
               className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="/projects"
               className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
             >
               Projects
             </Link>
             <Link
-              href="#"
+              href="/services"
               className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
             >
               Services
-            </Link>
-
-            <Link
-              href="#"
-              className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
-            >
-              Help
             </Link>
           </div>
           <div className=" w-48 border-b border-solid border-b-white"></div>
           <div className="mb-12 grid w-full max-w-[208px] grid-flow-col grid-cols-4 justify-items-center gap-3 text-center">
             <Link href="#">
-              <FaFacebook className="h-6 w-6" />
+              <FaFacebook className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
             </Link>
             <Link href="#">
-              <FaXTwitter className="h-6 w-6" />
+              <FaXTwitter className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
             </Link>
             <Link href="#">
-              <FaInstagram className="h-6 w-6" />
+              <FaInstagram className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
             </Link>
             <Link href="#">
-              <FaGithub className="h-6 w-6" />
+              <FaGithub className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
             </Link>
           </div>
         </div>

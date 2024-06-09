@@ -20,7 +20,11 @@ const bodoni_moda = Bodoni_Moda({
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
 };
 
 function Hero() {
@@ -29,7 +33,8 @@ function Hero() {
       className="max-container relative z-40 mt-44 flex w-full flex-col flex-wrap items-center gap-6 sm:mt-48 md:mt-56 md:gap-8 lg:mt-60"
       initial="hidden"
       animate="visible"
-      transition={{ staggerChildren: 1 }}
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 1, type: "easeInOut" }}
     >
       <Spotlight
         className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"

@@ -78,10 +78,12 @@ select:-webkit-autofill:focus {
     color: #d080ff;
   }
   .number {
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transform: translateX(5px);
   }
   .LinkContainer:hover .number {
+    color: rgb(253 247 255 / 0.1);
+    scale: 1.1;
     transform: rotate(-5deg); /* Rotate the arrow 90 degrees */
   }
   .radial-gradient {
