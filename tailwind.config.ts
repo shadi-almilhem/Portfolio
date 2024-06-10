@@ -5,7 +5,6 @@ const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
-const flowbite = require("flowbite-react/tailwind");
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
@@ -24,7 +23,6 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    flowbite.content(),
   ],
   prefix: "",
   theme: {
@@ -157,7 +155,6 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    flowbite.plugin(),
 
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {

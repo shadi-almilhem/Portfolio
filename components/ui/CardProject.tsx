@@ -26,6 +26,7 @@ export function CardProject({
             width={1000}
             height={1000}
             alt="Project Image"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-1 flex-col py-5">
