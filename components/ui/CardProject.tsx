@@ -1,41 +1,62 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "./button";
 import { BadgeRotateBorder } from "./BadgeRotateBorder";
 import Link from "next/link";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
-export function CardProject({ src, heading, badgeText, ProjectExplain }: any) {
+export function CardProject({
+  websiteLink,
+  src,
+  heading,
+  badgeText,
+  ProjectExplain,
+}: any) {
   return (
-    <div className="group relative w-full max-w-[350px] overflow-hidden rounded-xl  ">
-      <div className="relative flex flex-col gap-3 p-4">
-        <div className="space-y-4">
+    <div className="w-full max-w-[350px] p-4">
+      <div className="flex h-full max-w-sm flex-col  ">
+        <div className="relative h-64 w-full">
           <Image
+            className=" h-full w-full rounded-t-lg object-fill object-center shadow-lg shadow-primary/10"
             src={src}
-            alt="Product image"
-            height={1027}
-            width={768}
-            priority={true}
-            className="h-60 rounded-lg bg-contain md:h-64"
+            width={1000}
+            height={1000}
+            alt="Project Image"
           />
-          <div className="flex flex-col items-start justify-between">
-            <h3 className="text-xl font-semibold text-white">{heading}</h3>
-            <p className="pb-2 pt-2 text-sm font-light leading-5 tracking-wide text-white/85">
+        </div>
+        <div className="flex flex-1 flex-col py-5">
+          <h5 className="mb-2  text-xl font-bold tracking-tight text-white">
+            {heading}
+          </h5>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <p className="mb-3 line-clamp-3 h-[70px] cursor-default font-normal text-gray-200">
+                {ProjectExplain}
+              </p>
+            </HoverCardTrigger>
+            <HoverCardContent className="bg-gradient-to-b from-gray-300/80 to-gray-200/60 backdrop-blur-sm">
               {ProjectExplain}
-            </p>
+            </HoverCardContent>
+          </HoverCard>
+          <div className="mt-4">
+            <Link
+              href={websiteLink || src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold uppercase text-black duration-300 hover:bg-white"
+            >
+              Open
+            </Link>
+            <div className="flex flex-wrap gap-1">
+              {badgeText.split(" ").map((text: string) => (
+                <BadgeRotateBorder key={text} text={text} />
+              ))}
+            </div>
           </div>
-
-          <Link
-            href={src}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold uppercase text-black duration-300 hover:bg-white"
-          >
-            Open
-          </Link>
-          {badgeText.split(" ").map((text: string) => (
-            <BadgeRotateBorder key={text} text={text} />
-          ))}
         </div>
       </div>
     </div>

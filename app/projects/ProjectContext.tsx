@@ -1,3 +1,4 @@
+// File: pages/ProjectContext.js
 "use client";
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
@@ -5,6 +6,7 @@ import { supabase } from "@/lib/supabaseClient";
 interface Project {
   title: string;
   imageLink: string;
+  websiteLink?: string; // Optional field for website link
   badgeText: string;
   projectExplain: string;
   // ... any other properties of a project
@@ -12,7 +14,7 @@ interface Project {
 
 interface ProjectContextType {
   projects: Project[];
-  fetchProjects: (offset: number) => Promise<void>;
+  fetchProjects: () => Promise<void>;
 }
 
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
@@ -26,18 +28,20 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({
     const cachedProjects = sessionStorage.getItem("projects");
     if (cachedProjects) {
       setProjects(JSON.parse(cachedProjects));
+    } else {
+      fetchProjects();
     }
   }, []);
 
-  const fetchProjects = async (offset: number) => {
+  const fetchProjects = async () => {
     try {
-      const { data, error } = await supabase
-        .from("portfolio")
-        .select("*")
-        .range(offset, offset + 9);
+      const { data, error } = await supabase.from("portfolio").select("*");
       if (error) throw error;
       if (Array.isArray(data)) {
-        const newProjects = [...projects, ...data];
+        const newProjects = data.map((project) => ({
+          ...project,
+          link: project.websiteLink || project.imageLink,
+        }));
         setProjects(newProjects);
         sessionStorage.setItem("projects", JSON.stringify(newProjects));
       }

@@ -21,6 +21,7 @@ interface Project {
   imageLink: string;
   badgeText: string;
   projectExplain: string;
+  websiteLink?: string;
 }
 
 function ProjectsShow() {
@@ -33,20 +34,19 @@ function ProjectsShow() {
     const loadProjects = async () => {
       setLoading(true);
       if (projects.length === 0) {
-        await fetchProjects(0);
+        await fetchProjects();
       }
-      setVisibleProjects(projects.slice(0, offset + 10));
+      setVisibleProjects(projects.slice(0, 6));
       setLoading(false);
     };
     loadProjects();
-  }, [projects, offset, fetchProjects]);
+    console.log(projects);
+  }, [projects, fetchProjects]);
 
-  const handleSeeMore = async () => {
-    setLoading(true);
-    const newOffset = offset + 10;
+  const handleSeeMore = () => {
+    const newOffset = offset + 6;
+    setVisibleProjects(projects.slice(0, newOffset + 6));
     setOffset(newOffset);
-    await fetchProjects(newOffset);
-    setLoading(false);
   };
 
   return (
@@ -73,8 +73,9 @@ function ProjectsShow() {
           ) : (
             visibleProjects.map((project) => (
               <CardProject
-                key={project.title}
+                key={project.imageLink}
                 src={project.imageLink}
+                websiteLink={project.websiteLink}
                 heading={project.title}
                 badgeText={project.badgeText}
                 ProjectExplain={project.projectExplain}
@@ -87,8 +88,9 @@ function ProjectsShow() {
         ) : (
           <Button
             variant="secondary"
-            className="gradient-s-button w-full rounded-full px-3 text-white md:w-fit md:px-5 md:py-5"
+            className="gradient-s-button mt-5 w-full rounded-full px-3 text-white md:w-fit md:px-5 md:py-5"
             onClick={handleSeeMore}
+            disabled={visibleProjects.length >= projects.length}
           >
             See More
           </Button>

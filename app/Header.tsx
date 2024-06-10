@@ -37,7 +37,7 @@ function Header() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation("visible");
-    }, 3500);
+    }, 2200);
     return () => clearTimeout(timer);
   }, []);
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -71,7 +71,7 @@ function Header() {
         initial="slideIn"
         animate={hidden ? "hidden" : initialAnimation}
         transition={{ type: "easeInOut" }}
-        className="flexBetween fixed top-0  z-50 mx-auto block w-full  max-w-screen-xl  items-center gap-2 rounded-md bg-transparent px-8 py-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] backdrop-blur-md sm:gap-8 sm:py-2 md:mt-8 md:w-fit md:rounded-full md:border-2 md:border-white/20 md:px-4 md:py-[2px] md:pl-1 md:pr-2 md:shadow-none lg:w-fit"
+        className="flexBetween fixed top-0  z-50 mx-auto block w-full max-w-screen-xl  items-center  gap-2 rounded-md bg-transparent px-8 py-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] backdrop-blur-sm   sm:gap-8 sm:py-2 md:mt-8 md:w-fit md:rounded-full md:border-2 md:border-white/20 md:px-4 md:py-[2px] md:pl-1 md:pr-2 md:shadow-none lg:w-fit"
       >
         <div
           ref={logoRef}
@@ -79,7 +79,7 @@ function Header() {
         >
           <Link href="/">
             <Image
-              className=" -rotate-[50deg]"
+              className=" -rotate-[22deg]"
               src={logo}
               alt="logo"
               priority={true}

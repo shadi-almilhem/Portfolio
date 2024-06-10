@@ -12,9 +12,16 @@ const NAV_LINKS = [
   { name: "Services", link: "/services" },
 ];
 
+const SOCIAL_LINKS = [
+  { icon: FaFacebook, link: "https://www.facebook.com/ShadiAlMilhem" },
+  { icon: FaXTwitter, link: "https://x.com/shadi_m02" },
+  { icon: FaInstagram, link: "https://www.instagram.com/shadi_m02" },
+  { icon: FaGithub, link: "https://github.com/shadi-almilhem" },
+];
+
 function Footer() {
   return (
-    <footer className="relative flex  h-full w-full flex-col items-center justify-center overflow-hidden    bg-center  text-white">
+    <footer className="relative flex  h-full w-full flex-col items-center justify-center overflow-hidden bg-center text-white">
       <div className="z-50 mx-auto mt-16 h-full w-full max-w-7xl px-5 pt-20 ">
         <div className="flex flex-col items-center gap-4">
           <div className="">
@@ -22,39 +29,26 @@ function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
-            <Link
-              href="/"
-              className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
-            >
-              Home
-            </Link>
-            <Link
-              href="/projects"
-              className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/services"
-              className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
-            >
-              Services
-            </Link>
+            {NAV_LINKS.map((navLink) => (
+              <Link
+                key={navLink.name}
+                href={navLink.link}
+                className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
+              >
+                {navLink.name}
+              </Link>
+            ))}
           </div>
-          <div className=" w-48 border-b border-solid border-b-white"></div>
+          <div className="w-48 border-b border-solid border-b-white"></div>
           <div className="mb-12 grid w-full max-w-[208px] grid-flow-col grid-cols-4 justify-items-center gap-3 text-center">
-            <Link href="#">
-              <FaFacebook className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
-            </Link>
-            <Link href="#">
-              <FaXTwitter className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
-            </Link>
-            <Link href="#">
-              <FaInstagram className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
-            </Link>
-            <Link href="#">
-              <FaGithub className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
-            </Link>
+            {SOCIAL_LINKS.map((socialLink, index) => {
+              const Icon = socialLink.icon;
+              return (
+                <Link key={index} href={socialLink.link}>
+                  <Icon className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

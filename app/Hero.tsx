@@ -9,6 +9,8 @@ import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { motion } from "framer-motion"; // Import framer-motion
+import GridPattern from "@/components/ui/GridPattern";
+import { cn } from "@/lib/utils";
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -19,11 +21,11 @@ const bodoni_moda = Bodoni_Moda({
 });
 
 const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 },
+    transition: { duration: 0.3 },
   },
 };
 
@@ -34,8 +36,17 @@ function Hero() {
       initial="hidden"
       animate="visible"
       viewport={{ once: true }}
-      transition={{ staggerChildren: 1, type: "easeInOut" }}
+      transition={{ staggerChildren: 0.6, type: "easeInOut" }}
     >
+      <GridPattern
+        width={80}
+        height={80}
+        x={-1}
+        y={-1}
+        className={cn(
+          " [mask-image:radial-gradient(ellipse_at_center,transparent_10%,white,transparent_70%)]",
+        )}
+      />
       <Spotlight
         className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"
         fill="white"
