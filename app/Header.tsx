@@ -107,6 +107,7 @@ function Header() {
         </div>
         <div className="flex items-center gap-4">
           <Link
+            onClick={() => setMenuOpen(false)}
             className="font-semibold tracking-wide"
             prefetch={true}
             href="/contact"
