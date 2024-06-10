@@ -21,7 +21,7 @@ export function CardProject({
       <div className="flex h-full max-w-sm flex-col  ">
         <div className="relative h-64 w-full">
           <Image
-            className=" h-full w-full rounded-t-lg object-fill object-center shadow-lg shadow-primary/10"
+            className=" h-full w-full  object-fill object-center shadow-lg shadow-primary/10"
             src={src}
             width={1000}
             height={1000}
