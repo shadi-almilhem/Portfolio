@@ -40,7 +40,7 @@ function Projects() {
   }, [projects, fetchProjects]);
 
   return (
-    <section className="max-container relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t from-gray-500/5 via-purple-500/5  to-transparent p-8">
+    <section className="max-container relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t from-gray-300/10 via-primary/5  to-transparent p-8">
       <h2
         className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
       >
@@ -68,17 +68,17 @@ function Projects() {
             ))
           )}
         </div>
-        <Button
-          variant="secondary"
-          className="gradient-s-button w-full rounded-full px-3 text-white md:w-fit md:px-5 md:py-5"
+        <Link
+          className="medium-12 gradient-s-button md:medium-14 lg:medium-16 w-full rounded-full md:w-fit"
+          href="/projects"
         >
-          <Link
-            className="medium-12 md:medium-14 lg:medium-16"
-            href="/projects"
+          <Button
+            variant="secondary"
+            className="  px-3 text-white  md:px-5 md:py-5"
           >
             See More
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </section>
   );
