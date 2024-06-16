@@ -34,7 +34,7 @@ function Footer() {
                 aria-label={`${navLink.link}`}
                 key={navLink.name}
                 href={navLink.link}
-                className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
+                className="inline-block px-3 py-2 font-normal  transition-all duration-300 hover:font-semibold hover:text-purple-400 md:px-6"
               >
                 {navLink.name}
               </Link>
