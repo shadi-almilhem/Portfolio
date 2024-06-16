@@ -114,7 +114,7 @@ function Hero() {
 
         <Link
           className="medium-12 md:medium-14 lg:medium-16 w-[80%] md:w-fit"
-          href="../public/pdf/Shadi Al Milhem CV.pdf"
+          href="/pdf/Shadi Al Milhem CV.pdf"
           aria-label="Download CV"
         >
           <Button
