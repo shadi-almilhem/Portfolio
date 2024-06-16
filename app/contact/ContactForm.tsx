@@ -72,16 +72,24 @@ function ContactForm() {
   return (
     <div className="z-50 flex w-full flex-col gap-4 px-8 md:w-2/3 lg:w-1/2">
       <div className="flex flex-col gap-4 sm:flex-row">
-        <Button className=" rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+        <Button
+          aria-label="Email Me"
+          className=" rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white"
+        >
           <Link
+            aria-label="Email Me"
             className="flex items-center gap-2 font-bold uppercase  "
             href="mailto:almilhemshadi@gmail.com"
           >
             Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
           </Link>
         </Button>
-        <Button className="    rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white">
+        <Button
+          aria-label="Schedule a call"
+          className="rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white"
+        >
           <Link
+            aria-label="Schedule a call"
             className="flex items-center gap-2 font-bold uppercase"
             href="https://cal.com/shadi-al-milhem"
           >
@@ -156,6 +164,7 @@ function ContactForm() {
           />
 
           <Button
+            aria-label="Send Email"
             className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold  uppercase text-black duration-300 hover:bg-white"
             type="submit"
           >

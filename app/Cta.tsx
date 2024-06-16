@@ -41,8 +41,14 @@ function Cta() {
                   <Badge key={index} text={badge.text} color="white" />
                 ))}
               </div>
-              <Button className="gradient-button bold-16 w-[80%] rounded-full text-white sm:w-fit md:px-8 md:py-5">
-                <Link className="medium-14 md:medium-16 lg:medium-18" href="/">
+              <Button
+                aria-label="Get in Touch"
+                className="gradient-button bold-16 w-[80%] rounded-full text-white sm:w-fit md:px-8 md:py-5"
+              >
+                <Link
+                  className="medium-14 md:medium-16 lg:medium-18"
+                  href="/contact"
+                >
                   Get in Touch
                 </Link>
                 <Mail className="ml-2 h-4 w-4" />

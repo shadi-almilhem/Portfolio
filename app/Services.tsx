@@ -53,6 +53,7 @@ function Services() {
       <div className="grid  grid-cols-1 gap-4 px-8 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
         {services.map((service, index) => (
           <Link
+            aria-label={service.title}
             href="/contact"
             key={index}
             className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "

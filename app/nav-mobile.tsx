@@ -2,7 +2,6 @@ import React from "react";
 import { useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
   { name: "Home", link: "/" },
@@ -44,6 +43,7 @@ const NavMobile: React.FC<NavMobileProps> = ({ isOpen, toggleMenu }) => {
                   className="w-full font-semibold "
                 >
                   <Link
+                    aria-label={link.name}
                     onClick={toggleMenu}
                     className=" flex w-full items-center justify-between p-5 text-white/90 hover:text-white"
                     href={link.link}

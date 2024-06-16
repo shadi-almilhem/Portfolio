@@ -100,21 +100,27 @@ function Hero() {
         className="flex w-[100%] flex-col items-center gap-6 md:w-min md:flex-row md:gap-6"
       >
         <Link
+          aria-label="Get in Touch"
           className="medium-14 md:medium-16 lg:medium-18 w-[80%]"
           href="/contact"
         >
-          <Button className="gradient-button bold-16 w-full rounded-full text-white md:px-8 md:py-5">
+          <Button
+            aria-label="Get in Touch"
+            className="gradient-button bold-16 w-full rounded-full  py-5 text-white md:px-8"
+          >
             Get in Touch <Mail className="ml-2 h-4 w-4" />
           </Button>
         </Link>
 
         <Link
           className="medium-12 md:medium-14 lg:medium-16 w-[80%] md:w-fit"
-          href="/pdf/Shadi Al Milhem CV.pdf"
+          href="../public/pdf/Shadi Al Milhem CV.pdf"
+          aria-label="Download CV"
         >
           <Button
+            aria-label="Download CV"
             variant="secondary"
-            className="gradient-s-button w-full rounded-full px-3 text-white md:px-5 md:py-5"
+            className="gradient-s-button w-full rounded-full  py-4 text-white md:px-5"
           >
             Download CV <Download className="ml-2 h-4 w-4" />
           </Button>

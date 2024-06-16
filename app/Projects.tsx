@@ -69,10 +69,12 @@ function Projects() {
           )}
         </div>
         <Link
+          aria-label="projects"
           className="medium-12 gradient-s-button md:medium-14 lg:medium-16 w-full rounded-full md:w-fit"
           href="/projects"
         >
           <Button
+            aria-label="projects"
             variant="secondary"
             className="  px-3 text-white  md:px-5 md:py-5"
           >

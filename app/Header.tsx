@@ -77,7 +77,7 @@ function Header() {
           ref={logoRef}
           className="h-[50px] w-[50px] overflow-hidden   rounded-full border-2 border-primary/50"
         >
-          <Link href="/">
+          <Link aria-label="Logo" href="/">
             <Image
               className=" -rotate-[22deg]"
               src={logo}
@@ -98,7 +98,7 @@ function Header() {
                     : "text-white/85"
                 }  relative mx-2  transition duration-300 before:h-[1px] hover:text-white md:mx-4 md:before:absolute md:before:-bottom-0.5 md:before:block md:before:w-full md:before:origin-bottom-right md:before:scale-x-0 md:before:bg-white md:before:transition md:before:duration-300 md:before:ease-out md:hover:bg-inherit md:hover:text-white md:hover:before:origin-bottom-left md:hover:before:scale-x-100 lg:mx-8 `}
               >
-                <Link href={link.link} prefetch={true}>
+                <Link aria-label={link.name} href={link.link} prefetch={true}>
                   {link.name}
                 </Link>
               </li>
@@ -111,8 +111,10 @@ function Header() {
             className="font-semibold tracking-wide"
             prefetch={true}
             href="/contact"
+            aria-label="Contact"
           >
             <Button
+              aria-label="Contact"
               variant={"default"}
               className="gradient-button rounded-full text-white"
             >

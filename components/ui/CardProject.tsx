@@ -30,9 +30,9 @@ export function CardProject({
           />
         </div>
         <div className="flex flex-1 flex-col py-5">
-          <h5 className="mb-2  text-xl font-bold tracking-tight text-white">
+          <h3 className="mb-2  text-xl font-bold tracking-tight text-white">
             {heading}
-          </h5>
+          </h3>
           <HoverCard>
             <HoverCardTrigger asChild>
               <p className="mb-3 line-clamp-3 h-[70px] cursor-default font-normal text-gray-200">

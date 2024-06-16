@@ -31,6 +31,7 @@ function Footer() {
           <div className="flex flex-wrap justify-center text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
             {NAV_LINKS.map((navLink) => (
               <Link
+                aria-label={`${navLink.link}`}
                 key={navLink.name}
                 href={navLink.link}
                 className="inline-block px-3 py-2 font-normal transition hover:text-primary md:px-6"
@@ -44,7 +45,11 @@ function Footer() {
             {SOCIAL_LINKS.map((socialLink, index) => {
               const Icon = socialLink.icon;
               return (
-                <Link key={index} href={socialLink.link}>
+                <Link
+                  aria-label={`${socialLink.link}`}
+                  key={index}
+                  href={socialLink.link}
+                >
                   <Icon className="h-6 w-6 text-white/85 transition-all duration-300 hover:text-white" />
                 </Link>
               );
