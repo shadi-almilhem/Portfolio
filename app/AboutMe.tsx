@@ -34,7 +34,7 @@ export default function AboutMe() {
           <Image
             src={profileImage}
             loading="lazy"
-            quality={20}
+            quality={10}
             alt="Shadi image"
             className="sticky top-0 w-full self-start pt-8    sm:w-2/3 sm:pt-32"
           />
