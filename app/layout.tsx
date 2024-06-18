@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "Al Milhem",
     "Shadi Al Milhem",
     "Shadi Almilhem",
+    "shadialmilhem",
     "Shadi Al Melhem",
     "Shadi Al Milhem Portfolio",
     "شادي الملحم",

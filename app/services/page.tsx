@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Al Milhem",
     "Services by Shadi Al Milhem",
     "Shadi Al Milhem",
+    "shadialmilhem",
     "Shadi Almilhem",
     "Shadi Al Melhem",
     "Shadi Al Milhem Portfolio",
