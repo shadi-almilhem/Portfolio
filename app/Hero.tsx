@@ -11,7 +11,38 @@ import { Spotlight } from "@/components/ui/Spotlight";
 import { motion } from "framer-motion"; // Import framer-motion
 import GridPattern from "@/components/ui/GridPattern";
 import { cn } from "@/lib/utils";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Shadi Al Milhem",
+  description: "Shadi Al Milhem Portfolio",
+  keywords: [
+    "Shadi",
+    "Al Milhem",
+    "Shadi Al Milhem",
+    "Shadi Almilhem",
+    "Shadi Al Melhem",
+    "Shadi Al Milhem Portfolio",
+    "شادي الملحم",
+    "شادي",
+    "shadi al melhem",
+    "shadi almelhem",
+    "shadi al milhem",
+    "web developer",
+    "frontend developer",
+    "backend developer",
+    "full stack developer",
+    "software engineer",
+    "portfolio",
+    "Next.js",
+    "UI/UX",
+    "web design",
+    "responsive design",
+    "SEO",
+    "open source",
+  ],
+  icons: { icon: "/favicon.ico" },
+  creator: "Shadi Al Milhem",
+};
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],

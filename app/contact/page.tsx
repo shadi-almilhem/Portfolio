@@ -1,9 +1,40 @@
-"use client";
 import React from "react";
 import GridPattern from "@/components/ui/GridPattern";
 import { cn } from "@/lib/utils";
 import ContactContainer from "./ContactContainer";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Contact | Shadi Al Milhem",
+  description: "Contact Shadi Al Milhem",
+  keywords: [
+    "Shadi",
+    "Al Milhem",
+    "Contact Shadi Al Milhem",
+    "Shadi Al Milhem",
+    "Shadi Almilhem",
+    "Shadi Al Melhem",
+    "Shadi Al Milhem Portfolio",
+    "شادي الملحم",
+    "شادي",
+    "shadi al melhem",
+    "shadi almelhem",
+    "shadi al milhem",
+    "web developer",
+    "frontend developer",
+    "backend developer",
+    "full stack developer",
+    "software engineer",
+    "portfolio",
+    "Next.js",
+    "UI/UX",
+    "web design",
+    "responsive design",
+    "SEO",
+    "open source",
+  ],
+  icons: { icon: "/favicon.ico" },
+  creator: "Shadi Al Milhem",
+};
 function page() {
   return (
     <main className="flex w-full flex-col items-center justify-between gap-28">

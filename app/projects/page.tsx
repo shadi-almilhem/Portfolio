@@ -4,7 +4,39 @@ import React from "react";
 import ProjectsShow from "./ProjectsShow";
 import { ProjectProvider } from "./ProjectContext";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Projects | Shadi Al Milhem",
+  description: "Projects by Shadi Al Milhem",
+  keywords: [
+    "Shadi",
+    "Al Milhem",
+    "Projects by Shadi Al Milhem",
+    "Shadi Al Milhem",
+    "Shadi Almilhem",
+    "Shadi Al Melhem",
+    "Shadi Al Milhem Portfolio",
+    "شادي الملحم",
+    "شادي",
+    "shadi al melhem",
+    "shadi almelhem",
+    "shadi al milhem",
+    "web developer",
+    "frontend developer",
+    "backend developer",
+    "full stack developer",
+    "software engineer",
+    "portfolio",
+    "Next.js",
+    "UI/UX",
+    "web design",
+    "responsive design",
+    "SEO",
+    "open source",
+  ],
+  icons: { icon: "/favicon.ico" },
+  creator: "Shadi Al Milhem",
+};
 function Page() {
   return (
     <ProjectProvider>

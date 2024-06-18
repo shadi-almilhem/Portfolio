@@ -5,6 +5,7 @@ import { Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Cta from "./Cta";
 import Footer from "./Footer";
+import Head from "next/head";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -14,7 +15,7 @@ const nunito = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Shadi Al Milhem",
+  title: "Home | Shadi Al Milhem",
   description: "Shadi Al Milhem Portfolio",
   keywords: [
     "Shadi",
@@ -52,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="description" content="Shadi Al Milhem Portfolio" />
         <meta property="og:title" content="Shadi Al Milhem" />
         <meta property="og:description" content="Shadi Al Milhem Portfolio" />
@@ -89,7 +90,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
+      </Head>
       <body
         className={`${nunito.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010]`}
       >

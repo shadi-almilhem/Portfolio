@@ -1,19 +1,43 @@
-"use client";
 import GridPattern from "@/components/ui/GridPattern";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { cn } from "@/lib/utils";
 
-import { Bodoni_Moda } from "next/font/google";
 import React from "react";
 import ServicesCards from "./ServicesCards";
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Services | Shadi Al Milhem",
+  description: "Services by Shadi Al Milhem",
+  keywords: [
+    "Shadi",
+    "Al Milhem",
+    "Services by Shadi Al Milhem",
+    "Shadi Al Milhem",
+    "Shadi Almilhem",
+    "Shadi Al Melhem",
+    "Shadi Al Milhem Portfolio",
+    "شادي الملحم",
+    "شادي",
+    "shadi al melhem",
+    "shadi almelhem",
+    "shadi al milhem",
+    "web developer",
+    "frontend developer",
+    "backend developer",
+    "full stack developer",
+    "software engineer",
+    "portfolio",
+    "Next.js",
+    "UI/UX",
+    "web design",
+    "responsive design",
+    "SEO",
+    "open source",
+  ],
+  icons: { icon: "/favicon.ico" },
+  creator: "Shadi Al Milhem",
+};
 function page() {
   return (
     <main className="flex w-full flex-col items-center justify-between gap-28">
