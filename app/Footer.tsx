@@ -33,7 +33,7 @@ function Footer() {
           <div className="">
             <h2
               className={`text-glow gradient-text relative inline-block justify-center px-4 text-center font-bold ${bodoni_moda.className}`}
-              style={{ fontSize: "clamp(40px, 5vw, 88px)" }}
+              style={{ fontSize: "clamp(32px, 5vw, 72px)" }}
             >
               Shadi Al Milhem
             </h2>

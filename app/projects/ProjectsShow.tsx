@@ -56,11 +56,11 @@ function ProjectsShow() {
         fill="white"
       />
 
-      <h2
+      <h1
         className={`${bodoni_moda.className} gradient-p lg:medium-52 md:medium-40 medium-32 gradient-p mx-auto  px-4 text-center italic leading-[130%]`}
       >
         My Projects
-      </h2>
+      </h1>
       <div className="flex flex-col items-center gap-8">
         <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
           {loading ? (

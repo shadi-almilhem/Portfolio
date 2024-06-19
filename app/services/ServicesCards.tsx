@@ -72,11 +72,11 @@ const services = [
 function ServicesCards() {
   return (
     <section className="max-container relative mb-8 mt-44 flex w-full flex-col items-center gap-8 sm:mt-48 md:mt-56 lg:mt-60">
-      <h2
+      <h1
         className={`${bodoni_moda.className} gradient-p lg:medium-52 md:medium-40 medium-32 gradient-p mx-auto  px-4 text-center italic leading-[130%]`}
       >
         My Services
-      </h2>
+      </h1>
 
       <div className="grid  grid-cols-1 gap-4 px-8 md:w-4/5 md:px-32 lg:grid-cols-2  lg:gap-8 lg:px-44 ">
         {services.map((service, index) => (
