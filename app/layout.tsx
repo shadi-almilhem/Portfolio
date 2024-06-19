@@ -11,7 +11,7 @@ const nunito = Nunito_Sans({
   subsets: ["latin"],
   fallback: ["Arial", "Times New Roman"],
   display: "fallback",
-  adjustFontFallback: false,
+  adjustFontFallback: true,
 });
 interface ExtendedMetadata extends Metadata {
   additionalMetaTags?: { name: string; content: string }[];

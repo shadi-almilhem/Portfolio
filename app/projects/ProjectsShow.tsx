@@ -13,7 +13,7 @@ const bodoni_moda = Bodoni_Moda({
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
+  adjustFontFallback: true,
 });
 
 interface Project {

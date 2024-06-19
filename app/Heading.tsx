@@ -7,7 +7,7 @@ const bodoni_moda = Bodoni_Moda({
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
+  adjustFontFallback: true,
 });
 
 type HeadingProps = {
@@ -26,7 +26,7 @@ function Heading({ imagePlace }: HeadingProps) {
           <Image
             src={profileImage}
             quality={20}
-            priority={true}
+            loading="lazy"
             alt="Shadi image"
             className="image-gradient-border hidden h-auto rotate-3 rounded-md bg-contain md:flex md:w-28 md:rounded-xl"
           />
