@@ -18,7 +18,7 @@ function Cta() {
       <div className="shadow-elegant relative  rounded-xl     bg-cover px-4 py-10">
         <Image
           src={backgroundImage}
-          alt="div background"
+          alt="Transform Your Vision into Reality"
           className="absolute left-0  top-0 -z-10 h-full w-full rounded-xl object-cover opacity-65"
           loading="lazy"
           quality={50}

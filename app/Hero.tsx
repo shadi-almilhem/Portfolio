@@ -96,7 +96,7 @@ function Hero() {
             src={profileImage}
             quality={40}
             priority={true}
-            alt="Shadi image"
+            alt="Shadi Al Milhem image"
             className="image-gradient-border h-auto w-20 justify-center rounded-xl bg-contain md:hidden"
           />
         </motion.div>
