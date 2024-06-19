@@ -56,7 +56,7 @@ const fadeIn = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.3 },
+    transition: { duration: 0.2 },
   },
 };
 
@@ -67,7 +67,7 @@ function Hero() {
       initial="hidden"
       animate="visible"
       viewport={{ once: true }}
-      transition={{ staggerChildren: 0.6, type: "easeInOut" }}
+      transition={{ staggerChildren: 0.2, type: "easeInOut" }}
     >
       <GridPattern
         width={80}

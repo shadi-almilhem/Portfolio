@@ -37,7 +37,7 @@ function Header() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialAnimation("visible");
-    }, 2200);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
   useMotionValueEvent(scrollY, "change", (latest) => {
