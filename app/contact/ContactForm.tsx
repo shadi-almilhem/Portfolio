@@ -80,7 +80,7 @@ function ContactForm() {
           <Link
             aria-label="Email Me"
             className="flex items-center gap-2 font-bold uppercase  "
-            href="mailto:almilhemshadi@gmail.com"
+            href="mailto:contact@shadialmilhem.com"
           >
             Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
           </Link>

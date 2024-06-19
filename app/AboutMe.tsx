@@ -10,7 +10,7 @@ const bodoni_moda = Bodoni_Moda({
   style: ["italic", "normal"],
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: true,
+  adjustFontFallback: false,
 });
 export default function AboutMe() {
   return (
