@@ -41,18 +41,15 @@ function Cta() {
                   <Badge key={index} text={badge.text} color="white" />
                 ))}
               </div>
-              <Button
-                aria-label="Get in Touch"
-                className="gradient-button bold-16 w-[80%] rounded-full text-white sm:w-fit md:px-8 md:py-5"
-              >
-                <Link
-                  className="medium-14 md:medium-16 lg:medium-18"
-                  href="/contact"
+              <Link className="w-[80%]" href="/contact">
+                <Button
+                  aria-label="Get in Touch"
+                  className="gradient-button bold-16 medium-14 md:medium-16 lg:medium-18  w-full rounded-full text-white sm:w-fit md:px-8 md:py-5"
                 >
                   Get in Touch
-                </Link>
-                <Mail className="ml-2 h-4 w-4" />
-              </Button>
+                  <Mail className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -73,31 +73,31 @@ function ContactForm() {
   return (
     <div className="z-50 flex w-full flex-col gap-4 px-8 md:w-2/3 lg:w-1/2">
       <div className="flex flex-col gap-4 sm:flex-row">
-        <Button
+        <Link
           aria-label="Email Me"
-          className=" rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white"
+          className="flex   items-center   "
+          href="mailto:contact@shadialmilhem.com"
         >
-          <Link
+          <Button
             aria-label="Email Me"
-            className="flex items-center gap-2 font-bold uppercase  "
-            href="mailto:contact@shadialmilhem.com"
+            className=" flex w-full gap-2 rounded-md bg-white/95 text-sm font-bold     uppercase text-black duration-300 hover:bg-white"
           >
             Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
-          </Link>
-        </Button>
-        <Button
+          </Button>
+        </Link>
+        <Link
           aria-label="Schedule a call"
-          className="rounded-md bg-white/95 px-4 py-3 text-sm font-semibold uppercase text-black duration-300 hover:bg-white"
+          className=" items-center  font-bold uppercase"
+          href="https://cal.com/shadi-al-milhem"
         >
-          <Link
+          <Button
             aria-label="Schedule a call"
-            className="flex items-center gap-2 font-bold uppercase"
-            href="https://cal.com/shadi-al-milhem"
+            className="flex w-full gap-2 rounded-md bg-white/95 px-4 py-3 text-sm font-bold uppercase text-black duration-300 hover:bg-white"
           >
             Schedule a call{" "}
             <Calendar strokeWidth={2.5} className="h-auto w-4 self-start " />
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
       <div className="flex w-full items-center justify-center overflow-hidden">
         <Separator className="h-[1px] rounded-full bg-white  " />
