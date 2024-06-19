@@ -13,8 +13,11 @@ const nunito = Nunito_Sans({
   display: "fallback",
   adjustFontFallback: false,
 });
-
-export const metadata: Metadata = {
+interface ExtendedMetadata extends Metadata {
+  additionalMetaTags?: { name: string; content: string }[];
+  structuredData?: { [key: string]: any };
+}
+export const metadata: ExtendedMetadata = {
   title: "Home | Shadi Al Milhem",
   description: "Shadi Al Milhem Portfolio",
   keywords: [
@@ -45,6 +48,43 @@ export const metadata: Metadata = {
   ],
   icons: { icon: "/favicon.ico" },
   creator: "Shadi Al Milhem",
+  openGraph: {
+    title: "Shadi Al Milhem",
+    description: "Shadi Al Milhem Portfolio",
+    url: "https://shadialmilhem.com",
+    images: [
+      {
+        url: "https://shadialmilhem.com/SH-logo.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shadi Al Milhem",
+    description: "Shadi Al Milhem Portfolio",
+    images: ["https://shadialmilhem.com/SH-logo.png"],
+  },
+  additionalMetaTags: [
+    {
+      name: "description",
+      content: "Shadi Al Milhem Portfolio",
+    },
+  ],
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: "https://shadialmilhem.com/",
+    name: "Shadi Al Milhem",
+    description: "Shadi Al Milhem Portfolio",
+    publisher: {
+      "@type": "Person",
+      name: "Shadi Al Milhem",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://shadialmilhem.com/SH-logo.png",
+      },
+    },
+  },
 };
 
 export default function RootLayout({
@@ -54,44 +94,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="description" content="Shadi Al Milhem Portfolio" />
-        <meta property="og:title" content="Shadi Al Milhem" />
-        <meta property="og:description" content="Shadi Al Milhem Portfolio" />
-        <meta
-          property="og:image"
-          content="https://shadialmilhem.com/SH-logo.png"
-        />
-        <meta property="og:url" content="https://shadialmilhem.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Shadi Al Milhem" />
-        <meta name="twitter:description" content="Shadi Al Milhem Portfolio" />
-        <meta
-          name="twitter:image"
-          content="https://shadialmilhem.com/SH-logo.png"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: "https://shadialmilhem.com/",
-              name: "Shadi Al Milhem",
-              description: "Shadi Al Milhem Portfolio",
-              publisher: {
-                "@type": "Person",
-                name: "Shadi Al Milhem",
-                logo: {
-                  "@type": "ImageObject",
-                  url: "https://shadialmilhem.com/SH-logo.png",
-                },
-              },
-            }),
-          }}
-        />
-      </Head>
       <body
         className={`${nunito.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010]`}
       >
