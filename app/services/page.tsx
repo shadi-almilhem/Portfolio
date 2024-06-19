@@ -7,6 +7,8 @@ import ServicesCards from "./ServicesCards";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://shadialmilhem.com`),
+
   title: "Services | Shadi Al Milhem",
   description: "Services by Shadi Al Milhem",
   keywords: [
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
-    canonical: "https://shadialmilhem.com/services",
+    canonical: "/services",
   },
 };
 function page() {

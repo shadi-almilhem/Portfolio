@@ -6,6 +6,8 @@ import { ProjectProvider } from "./ProjectContext";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { Metadata } from "next";
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://shadialmilhem.com`),
+
   title: "Projects | Shadi Al Milhem",
   description: "Projects by Shadi Al Milhem",
   keywords: [
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
-    canonical: "https://shadialmilhem.com/projects",
+    canonical: "/projects",
   },
 };
 function Page() {

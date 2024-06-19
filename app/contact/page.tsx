@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import ContactContainer from "./ContactContainer";
 import { Metadata } from "next";
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://shadialmilhem.com`),
+
   title: "Contact | Shadi Al Milhem",
   description: "Contact Shadi Al Milhem",
   keywords: [
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
-    canonical: "https://shadialmilhem.com/contact",
+    canonical: "/contact",
   },
 };
 function page() {
