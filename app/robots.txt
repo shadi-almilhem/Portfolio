@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /private/
+Disallow: /cdn-cgi/l/email-protection
+Disallow: /cdn-cgi/
 Sitemap: https://shadialmilhem.com/sitemap.xml

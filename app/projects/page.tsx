@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   ],
   icons: { icon: "/favicon.ico" },
   creator: "Shadi Al Milhem",
+  alternates: {
+    canonical: "https://shadialmilhem.com/projects",
+  },
 };
 function Page() {
   return (

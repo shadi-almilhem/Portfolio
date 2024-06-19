@@ -1,11 +1,17 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import Heading from "./Heading";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-
+import { Bodoni_Moda } from "next/font/google";
+const bodoni_moda = Bodoni_Moda({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  display: "swap",
+  fallback: ["Arial", "Times New Roman"],
+  adjustFontFallback: false,
+});
 const NAV_LINKS = [
   { name: "Home", link: "/" },
   { name: "Projects", link: "/projects" },
@@ -25,7 +31,12 @@ function Footer() {
       <div className="z-50 mx-auto mt-16 h-full w-full max-w-7xl px-5 pt-20 ">
         <div className="flex flex-col items-center gap-4">
           <div className="">
-            <Heading imagePlace={false} />
+            <h2
+              className={`text-glow gradient-text relative inline-block justify-center px-4 text-center font-bold ${bodoni_moda.className}`}
+              style={{ fontSize: "clamp(40px, 5vw, 88px)" }}
+            >
+              Shadi Al Milhem
+            </h2>
           </div>
 
           <div className="flex flex-wrap justify-center text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
