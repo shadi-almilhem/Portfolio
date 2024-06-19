@@ -67,7 +67,7 @@ function Hero() {
       initial="hidden"
       animate="visible"
       viewport={{ once: true }}
-      transition={{ staggerChildren: 0.2, type: "easeInOut" }}
+      transition={{ staggerChildren: 0.3, type: "easeInOut" }}
     >
       <GridPattern
         width={80}
