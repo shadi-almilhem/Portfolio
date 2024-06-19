@@ -17,17 +17,23 @@ export function CardProject({
   ProjectExplain,
 }: any) {
   return (
-    <div className="w-full max-w-[350px] p-4">
+    <div className="w-full max-w-[370px] p-4">
       <div className="flex h-full max-w-sm flex-col  ">
         <div className="relative h-64 w-full">
-          <Image
-            className=" h-full w-full  object-fill object-center shadow-lg shadow-primary/10"
-            src={src}
-            width={1000}
-            height={1000}
-            alt="Project Image"
-            loading="lazy"
-          />
+          <Link
+            href={websiteLink || src}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className=" h-full w-full rounded-t-lg object-fill object-center shadow-lg  shadow-primary/10 transition-all duration-300 hover:brightness-90"
+              src={src}
+              width={1000}
+              height={1000}
+              alt="Project Image"
+              loading="lazy"
+            />
+          </Link>
         </div>
         <div className="flex flex-1 flex-col py-5">
           <h3 className="mb-2  text-xl font-bold tracking-tight text-white">
