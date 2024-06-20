@@ -40,7 +40,6 @@ function ProjectsShow() {
       setLoading(false);
     };
     loadProjects();
-    console.log(projects);
   }, [projects, fetchProjects]);
 
   const handleSeeMore = () => {
