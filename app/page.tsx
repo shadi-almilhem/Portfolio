@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "SEO",
     "open source",
   ],
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
     canonical: "https://shadialmilhem.com/",

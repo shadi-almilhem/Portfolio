@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "SEO",
     "open source",
   ],
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
 };
 const bodoni_moda = Bodoni_Moda({
@@ -145,7 +145,7 @@ function Hero() {
 
         <Link
           className="medium-12 md:medium-14 lg:medium-16 w-[80%] md:w-fit"
-          href="/pdf/Shadi Al Milhem CV.pdf"
+          href="/pdf/Shadi-Al-Milhem-CV.pdf"
           aria-label="Download CV"
         >
           <Button

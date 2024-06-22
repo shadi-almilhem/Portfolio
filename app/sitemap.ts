@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: "https://shadialmilhem.com/pdf/Shadi%20Al%20Milhem%20CV.pdf",
+      url: "https://shadialmilhem.com/pdf/Shadi-Al-Milhem-CV.pdf",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.2,

@@ -35,7 +35,7 @@ const config = {
     },
     fontFamily: {
       sans: [
-        '"Inter var", sans-serif',
+        " sans-serif",
         {
           fontFeatureSettings: '"lnum"',
         },

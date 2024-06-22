@@ -46,7 +46,7 @@ export const metadata: ExtendedMetadata = {
     "SEO",
     "open source",
   ],
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
   openGraph: {
     title: "Shadi Al Milhem",
