@@ -20,7 +20,7 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
       <Image
         src={profileImage}
         quality={20}
-        loading="lazy"
+        priority={true}
         alt="Shadi image"
         className="image-gradient-border hidden h-auto rotate-3 rounded-md bg-contain md:flex md:w-24 md:rounded-xl lg:w-28"
       />

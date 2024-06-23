@@ -135,9 +135,9 @@ const Hero = () => {
   const springs = useSprings(
     items.length,
     items.map((_, index) => ({
-      from: { opacity: 0, transform: "translateY(30px)" },
-      to: { opacity: 1, transform: "translateY(0)" },
-      delay: index * 250,
+      from: { opacity: 0, transform: "translateY(30px)", filter: "blur(20px)" },
+      to: { opacity: 1, transform: "translateY(0)", filter: "blur(0px)" },
+      delay: index * 180,
       config: { duration: 200 },
     })),
   );
