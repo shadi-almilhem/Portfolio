@@ -7,6 +7,7 @@ const nextConfig = {
       { protocol: "https", hostname: "yguwmcpahurplgyydvrk.supabase.co" },
     ],
   },
+  reactStrictMode: false,
 };
 
 export default withBundleAnalyzer({

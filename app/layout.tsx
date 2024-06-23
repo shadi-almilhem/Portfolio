@@ -5,7 +5,6 @@ import { Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Cta from "./Cta";
 import Footer from "./Footer";
-import Head from "next/head";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
