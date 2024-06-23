@@ -19,9 +19,10 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
     <span className="absolute mx-2 md:-bottom-3 md:-right-28 lg:-right-[7.5rem] lg:bottom-0 2xl:-right-32">
       <Image
         src={profileImage}
-        quality={20}
-        priority={true}
         alt="Shadi image"
+        priority={true}
+        width={300}
+        height={400}
         className="image-gradient-border hidden h-auto rotate-3 rounded-md bg-contain md:flex md:w-24 md:rounded-xl lg:w-28"
       />
     </span>
@@ -39,10 +40,10 @@ function Header() {
 }
 function Heading({ imagePlace }: HeadingProps) {
   return (
-    <>
+    <div className="relative">
       <Header />
       <ProfileImage imagePlace={imagePlace} />
-    </>
+    </div>
   );
 }
 

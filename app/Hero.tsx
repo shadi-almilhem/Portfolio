@@ -61,10 +61,11 @@ const Hero = () => {
         <div className="flex justify-center">
           <Image
             src={profileImage}
-            quality={40}
             priority={true}
+            width={200}
+            height={250}
             alt="Shadi Al Milhem image"
-            className="image-gradient-border h-auto w-20 justify-center rounded-xl bg-contain md:hidden"
+            className="image-gradient-border h-auto w-20 justify-center rounded-lg bg-contain md:hidden"
           />
         </div>
       ),
@@ -100,7 +101,7 @@ const Hero = () => {
     {
       key: "buttons",
       content: (
-        <div className="flex w-[100%] flex-col items-center gap-6 md:w-min md:flex-row md:gap-6">
+        <div className="flex w-full flex-col items-center gap-6 md:w-min md:flex-row md:gap-6">
           <Link
             aria-label="Get in Touch"
             className="medium-14 md:medium-16 lg:medium-18 w-[80%]"
@@ -162,7 +163,11 @@ const Hero = () => {
       <div className="sm:stars z-[-5]"></div>
 
       {springs.map((springStyle, index) => (
-        <animated.div style={springStyle} key={items[index].key}>
+        <animated.div
+          style={springStyle}
+          className="flex w-full flex-col items-center justify-center text-center"
+          key={items[index].key}
+        >
           {items[index].content}
         </animated.div>
       ))}
