@@ -80,20 +80,6 @@ const Particles: React.FC<ParticlesProps> = ({
       window.removeEventListener("resize", initCanvas);
     };
   }, [color]);
-
-  useEffect(() => {
-    onMouseMove();
-  }, [mousePosition.x, mousePosition.y]);
-
-  useEffect(() => {
-    initCanvas();
-  }, [refresh]);
-
-  const initCanvas = () => {
-    resizeCanvas();
-    drawParticles();
-  };
-
   const onMouseMove = () => {
     if (canvasRef.current) {
       const rect = canvasRef.current.getBoundingClientRect();
@@ -106,6 +92,18 @@ const Particles: React.FC<ParticlesProps> = ({
         mouse.current.y = y;
       }
     }
+  };
+  useEffect(() => {
+    onMouseMove();
+  }, [mousePosition.x, mousePosition.y, onMouseMove]);
+
+  useEffect(() => {
+    initCanvas();
+  }, [refresh]);
+
+  const initCanvas = () => {
+    resizeCanvas();
+    drawParticles();
   };
 
   type Circle = {
