@@ -21,7 +21,8 @@ function Cta() {
           alt="Transform Your Vision into Reality"
           className="absolute left-0  top-0 -z-10 h-full w-full rounded-xl object-cover opacity-65"
           loading="lazy"
-          quality={50}
+          width={1000}
+          height={500}
         />
         {/* Container */}
         <div className="mx-auto max-w-7xl px-5">
