@@ -1,7 +1,8 @@
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { Bodoni_Moda } from "next/font/google";
-import profileImage from "@/public/profileImage.webp";
 
+// Initialize the font outside of the component
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
   style: ["italic", "normal"],
@@ -10,15 +11,29 @@ const bodoni_moda = Bodoni_Moda({
   adjustFontFallback: false,
 });
 
+// Dynamically import the Image component
+const Image = dynamic(() => import("next/image"), { ssr: true });
+
+// Preload the image
+const profileImageUrl = "/profileImage.webp";
+
 type HeadingProps = {
   imagePlace: boolean;
 };
+
 function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
-  if (!imagePlace) return null;
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!imagePlace || !isMounted) return null;
+
   return (
     <span className="absolute mx-2 md:-bottom-3 md:-right-28 lg:-right-[7.5rem] lg:bottom-0 2xl:-right-32">
       <Image
-        src={profileImage}
+        src={profileImageUrl}
         alt="Shadi image"
         priority={true}
         width={300}
@@ -28,6 +43,7 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
     </span>
   );
 }
+
 function Header() {
   return (
     <h1
@@ -38,6 +54,7 @@ function Header() {
     </h1>
   );
 }
+
 function Heading({ imagePlace }: HeadingProps) {
   return (
     <div className="relative">
