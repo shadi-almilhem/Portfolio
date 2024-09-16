@@ -5,7 +5,7 @@ import { Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Cta from "./Cta";
 import Footer from "./Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const nunito = Nunito_Sans({
   subsets: ["latin"],
   fallback: ["Arial", "Times New Roman"],
@@ -28,6 +28,7 @@ export const metadata: ExtendedMetadata = {
     "Shadi Al Melhem",
     "Shadi Al Milhem Portfolio",
     "شادي الملحم",
+    "شادي اياد الملحم",
     "شادي",
     "shadi al melhem",
     "shadi almelhem",

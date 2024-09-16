@@ -35,7 +35,10 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const fetchProjects = async () => {
     try {
-      const { data, error } = await supabase.from("portfolio").select("*");
+      const { data, error } = await supabase
+        .from("portfolio")
+        .select("*")
+        .order("id", { ascending: false });
       if (error) throw error;
       if (Array.isArray(data)) {
         const newProjects = data.map((project) => ({

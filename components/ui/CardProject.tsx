@@ -41,7 +41,7 @@ export function CardProject({
           </h3>
           <HoverCard>
             <HoverCardTrigger asChild>
-              <p className="mb-3 line-clamp-3 h-[70px] cursor-default font-normal text-gray-200">
+              <p className=" line-clamp-3 h-[70px] cursor-default font-normal text-gray-300">
                 {ProjectExplain}
               </p>
             </HoverCardTrigger>
@@ -49,12 +49,12 @@ export function CardProject({
               {ProjectExplain}
             </HoverCardContent>
           </HoverCard>
-          <div className="mt-4">
+          <div>
             <Link
               href={websiteLink || src}
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-4 inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-bold uppercase text-black duration-300 hover:bg-white"
+              className="mb-2 inline-flex w-full items-start justify-start rounded-md  py-3 text-sm font-bold    uppercase text-white underline underline-offset-2 transition-all duration-300 hover:text-white/80 hover:underline-offset-4"
             >
               Open
             </Link>
