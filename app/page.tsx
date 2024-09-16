@@ -1,5 +1,3 @@
-import Hero from "./Hero";
-import Projects from "./Projects";
 import dynamic from "next/dynamic";
 
 import { ProjectProvider } from "./projects/ProjectContext";
@@ -41,6 +39,25 @@ export const metadata: Metadata = {
     canonical: "https://shadialmilhem.com/",
   },
 };
+
+const DynamicHero = dynamic(() => import("./Hero"), {
+  loading: () => (
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+    </div>
+  ),
+});
+const DynamicProject = dynamic(() => import("./Projects"), {
+  loading: () => (
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+      <div className="space-y-2">
+        <Skeleton className="h-4 w-[250px]" />
+        <Skeleton className="h-4 w-[200px]" />
+      </div>
+    </div>
+  ),
+});
 const DynamicServices = dynamic(() => import("./Services"), {
   loading: () => (
     <div className="flex flex-col space-y-3">
@@ -80,8 +97,8 @@ export default function Home() {
   return (
     <ProjectProvider>
       <main className="  flex w-full  flex-col items-center justify-between gap-28 ">
-        <Hero />
-        <Projects />
+        <DynamicHero />
+        <DynamicProject />
         <DynamicServices />
         <DynamicAboutMe />
         <DynamicStack />

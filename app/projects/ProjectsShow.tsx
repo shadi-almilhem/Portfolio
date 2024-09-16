@@ -88,7 +88,7 @@ function ProjectsShow() {
           <Button
             aria-label="See More Projects"
             variant="secondary"
-            className="gradient-s-button mt-5 w-full rounded-full px-3 text-white md:w-fit md:px-5 md:py-5"
+            className="gradient-s-button mt-5 w-full rounded-full px-3 text-white md:w-fit md:px-14 md:py-5"
             onClick={handleSeeMore}
             disabled={visibleProjects.length >= projects.length}
           >

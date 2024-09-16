@@ -74,9 +74,9 @@ function Projects() {
           href="/projects"
         >
           <Button
-            aria-label="projects"
+            aria-label="See More Projects"
             variant="secondary"
-            className="  w-full px-3 text-center text-white md:px-5 md:py-5"
+            className="  w-full px-4 text-center text-white md:px-5 md:py-5"
           >
             See More
           </Button>

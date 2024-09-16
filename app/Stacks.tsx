@@ -126,7 +126,10 @@ function Stacks() {
                     className="relative flex items-center justify-center"
                   >
                     <Tooltip>
-                      <TooltipTrigger className="z-10 m-4 flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-t from-[#dbdbdb] to-white">
+                      <TooltipTrigger
+                        aria-label={name}
+                        className="z-10 m-4 flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-t from-[#dbdbdb] to-white"
+                      >
                         <Ripple color={color} />
                         <IconComponent size={25} color={color} />
                       </TooltipTrigger>

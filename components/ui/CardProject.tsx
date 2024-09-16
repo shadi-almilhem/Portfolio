@@ -26,10 +26,10 @@ export function CardProject({
             rel="noopener noreferrer"
           >
             <Image
-              className=" h-full w-full rounded-t-lg object-fill object-center shadow-lg  shadow-primary/10 transition-all duration-300 hover:brightness-90"
+              className="h-full w-full rounded-t-lg object-cover object-center shadow-lg shadow-primary/10 transition-all duration-300 hover:brightness-90"
               src={src}
-              width={1000}
-              height={1000}
+              width={800}
+              height={800}
               alt="Project Image"
               loading="lazy"
             />
