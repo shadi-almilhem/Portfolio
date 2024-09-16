@@ -62,8 +62,8 @@ const Hero = () => {
           <Image
             src={profileImage}
             priority={true}
-            width={200}
-            height={250}
+            width={256}
+            height={300}
             alt="Shadi Al Milhem image"
             className="image-gradient-border h-auto w-20 justify-center rounded-lg bg-contain md:hidden"
           />
