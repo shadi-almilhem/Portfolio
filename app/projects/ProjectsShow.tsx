@@ -64,10 +64,11 @@ function ProjectsShow() {
         <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
           {loading ? (
             <>
-              <SkeletonCard />
-              <SkeletonCard />
-              <SkeletonCard />
-              <SkeletonCard />
+              {Array(4)
+                .fill(null)
+                .map((_, index) => (
+                  <SkeletonCard key={index} />
+                ))}
             </>
           ) : (
             visibleProjects.map((project) => (
@@ -88,7 +89,7 @@ function ProjectsShow() {
           <Button
             aria-label="See More Projects"
             variant="secondary"
-            className="gradient-s-button mt-5 w-full rounded-full px-3 text-white md:w-fit md:px-14 md:py-5"
+            className="gradient-s-button mt-5 w-full rounded-full px-3 py-6 text-white md:w-fit md:px-14 md:py-5"
             onClick={handleSeeMore}
             disabled={visibleProjects.length >= projects.length}
           >

@@ -50,10 +50,11 @@ function Projects() {
         <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
           {loading ? (
             <>
-              <SkeletonCard />
-              <SkeletonCard />
-              <SkeletonCard />
-              <SkeletonCard />
+              {Array(4)
+                .fill(null)
+                .map((_, index) => (
+                  <SkeletonCard key={index} />
+                ))}
             </>
           ) : (
             visibleProjects.map((project) => (
@@ -76,7 +77,7 @@ function Projects() {
           <Button
             aria-label="See More Projects"
             variant="secondary"
-            className="  w-full px-4 text-center text-white md:px-5 md:py-5"
+            className="w-full   px-4 py-6 text-center text-white md:px-5 md:py-5"
           >
             See More
           </Button>

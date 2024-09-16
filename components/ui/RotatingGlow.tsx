@@ -10,7 +10,7 @@ const RotatingGlow = () => {
         background="transparent"
         particleDensity={30}
         maxSize={2}
-        className="absolute h-2/3 w-2/3 overflow-hidden rounded-full "
+        className="absolute hidden h-2/3 w-2/3 overflow-hidden rounded-full sm:inline-flex "
         particleSize={0.1}
       />
       <div className="  animate-rotate-glow absolute inset-0 z-10  h-[15rem] w-[15rem] rounded-full opacity-60  md:h-full md:w-full md:opacity-40"></div>

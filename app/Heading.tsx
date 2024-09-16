@@ -36,8 +36,8 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
         src={profileImageUrl}
         alt="Shadi image"
         priority={true}
-        width={300}
-        height={400}
+        width={640}
+        height={751}
         className="image-gradient-border hidden h-auto rotate-3 rounded-md bg-contain md:flex md:w-24 md:rounded-xl lg:w-28"
       />
     </span>
