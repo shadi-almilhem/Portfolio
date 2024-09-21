@@ -20,7 +20,10 @@ interface ExtendedMetadata extends Metadata {
 }
 
 export const metadata: ExtendedMetadata = {
-  title: "Shadi Al Milhem | شادي الملحم - Web Developer Portfolio",
+  title: {
+    default: "Shadi Al Milhem | Full Stack Web Developer",
+    template: "%s  - Shadi Al Milhem | شادي الملحم ",
+  },
   description:
     "Shadi Al Milhem (شادي الملحم) - Full Stack Web Developer and Software Engineer Portfolio. Expertise in Next.js, UI/UX, and responsive design.",
   keywords: [
@@ -89,9 +92,9 @@ export const metadata: ExtendedMetadata = {
       "Shadi Al Milhem is a Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
     image: "https://shadialmilhem.com/SH-logo.png",
     sameAs: [
-      "https://github.com/yourgithub",
-      "https://linkedin.com/in/yourlinkedin",
-      "https://twitter.com/yourtwitter",
+      "https://github.com/shadi-almilhem",
+      "https://www.linkedin.com/in/shadi-al-milhem",
+      "https://x.com/shadi_m02",
     ],
     skills: [
       "Next.js",
@@ -122,7 +125,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full overflow-x-hidden rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
-        <main>{children}</main>
+        <main className="w-full">{children}</main>
         <SpeedInsights />
         <Cta />
         <Footer />

@@ -71,14 +71,14 @@ function ContactForm() {
   }
 
   return (
-    <div className="z-50 flex w-full flex-col gap-4 px-8 md:w-2/3 lg:w-1/2">
+    <div className="z-50 w-full max-w-4xl px-4 sm:px-6 md:px-8">
       <div className="flex flex-col gap-4 sm:flex-row">
         <Link aria-label="Email Me" href="mailto:contact@shadialmilhem.com">
           <Button
             aria-label="Email Me"
             className=" flex w-full items-center gap-2 rounded-md bg-white/95 text-sm font-bold     uppercase text-black duration-300 hover:bg-white"
           >
-            Email Me <Mail strokeWidth={2.5} className=" h-auto w-4    " />
+            Email Me <Mail strokeWidth={2.5} className=" ml-2 h-auto w-4   " />
           </Button>
         </Link>
         <Link
@@ -113,7 +113,7 @@ function ContactForm() {
                   <FormLabel className="text-base text-white">Name</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:text-white/60 autofill:!bg-[#282828]"
+                      className="rounded-md border-none bg-[#232323] p-3 font-light tracking-wider text-white placeholder:text-white/60 autofill:!bg-[#282828] focus:ring-2 focus:ring-white/25"
                       placeholder="Your Name"
                       {...field}
                     />
@@ -130,7 +130,7 @@ function ContactForm() {
                   <FormLabel className="text-base text-white">Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:text-white/60 autofill:bg-[#282828]"
+                      className="rounded-md border-none bg-[#232323] p-3 font-light tracking-wider text-white placeholder:text-white/60 autofill:bg-[#282828] focus:ring-2 focus:ring-white/25"
                       placeholder="example@email.com"
                       {...field}
                     />
@@ -149,7 +149,7 @@ function ContactForm() {
                 <FormLabel className="text-base text-white">Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="rounded-[4px] border-none bg-[#232323] p-4 pl-5 font-light tracking-wider text-white placeholder:tracking-wider placeholder:text-white/60 autofill:bg-[#282828]"
+                    className="min-h-[150px] rounded-md border-none bg-[#232323] p-3 font-light tracking-wider text-white placeholder:tracking-wider placeholder:text-white/60 autofill:bg-[#282828] focus:ring-2 focus:ring-white/25"
                     placeholder="Your message"
                     {...field}
                   />

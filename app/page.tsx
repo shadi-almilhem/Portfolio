@@ -3,22 +3,20 @@ import dynamic from "next/dynamic";
 import { ProjectProvider } from "./projects/ProjectContext";
 import { Metadata } from "next";
 import { Skeleton } from "@/components/ui/skeleton";
-export const metadata: Metadata = {
-  title: "Home | Shadi Al Milhem",
+interface ExtendedMetadata extends Metadata {
+  additionalMetaTags?: { name: string; content: string }[];
+  structuredData?: { [key: string]: any };
+}
+export const metadata: ExtendedMetadata = {
+  title: "Shadi Al Milhem | شادي الملحم - Web Developer Portfolio",
   description:
-    "Shadi Al Milhem Portfolio, Your Favorite Front-End Developer With 3 years experience. Crafting unforgettable websites for your online identity.",
+    "Shadi Al Milhem (شادي الملحم) - Full Stack Web Developer and Software Engineer Portfolio. Expertise in Next.js, UI/UX, and responsive design.",
   keywords: [
-    "Shadi",
-    "Al Milhem",
     "Shadi Al Milhem",
-    "shadialmilhem",
-    "Shadi Almilhem",
-    "Shadi Al Melhem",
-    "Shadi Al Milhem Portfolio",
     "شادي الملحم",
-    "شادي",
-    "shadi al melhem",
-    "shadi almelhem",
+    "Shadi Almelhem",
+    "Shadi Al Melhem",
+    "شادي اياد الملحم",
     "shadi al milhem",
     "web developer",
     "frontend developer",
@@ -35,8 +33,61 @@ export const metadata: Metadata = {
   ],
   icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
+  openGraph: {
+    title: "Shadi Al Milhem (شادي الملحم) - Web Developer Portfolio",
+    description:
+      "Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
+    url: "https://shadialmilhem.com",
+    images: [
+      {
+        url: "https://shadialmilhem.com/SH-logo.png",
+        alt: "Shadi Al Milhem Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shadi Al Milhem (شادي الملحم) - Web Developer",
+    description: "Full Stack Web Developer and Software Engineer Portfolio",
+    images: ["https://shadialmilhem.com/SH-logo.png"],
+  },
+  additionalMetaTags: [
+    {
+      name: "author",
+      content: "Shadi Al Milhem",
+    },
+    {
+      name: "language",
+      content: "English",
+    },
+  ],
   alternates: {
-    canonical: "https://shadialmilhem.com/",
+    canonical: "https://shadialmilhem.com",
+  },
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Shadi Al Milhem",
+    alternateName: "شادي الملحم",
+    url: "https://shadialmilhem.com/",
+    jobTitle: "Full Stack Web Developer",
+    description:
+      "Shadi Al Milhem is a Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
+    image: "https://shadialmilhem.com/SH-logo.png",
+    sameAs: [
+      "https://github.com/shadi-almilhem",
+      "https://www.linkedin.com/in/shadi-al-milhem",
+      "https://x.com/shadi_m02",
+    ],
+    skills: [
+      "Next.js",
+      "UI/UX Design",
+      "Responsive Web Design",
+      "SEO",
+      "Full Stack Development",
+    ],
   },
 };
 

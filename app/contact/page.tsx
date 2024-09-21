@@ -3,42 +3,49 @@ import GridPattern from "@/components/ui/GridPattern";
 import { cn } from "@/lib/utils";
 import ContactContainer from "./ContactContainer";
 import { Metadata } from "next";
-export const metadata: Metadata = {
+interface ExtendedMetadata extends Metadata {
+  additionalMetaTags?: { name: string; content: string }[];
+  structuredData?: { [key: string]: any };
+}
+export const metadata: ExtendedMetadata = {
   metadataBase: new URL(`https://shadialmilhem.com`),
 
-  title: "Contact | Shadi Al Milhem",
-  description: "Contact Shadi Al Milhem",
+  title: "Contact",
+  description: "Contact Shadi Al Milhem (شادي الملحم)",
   keywords: [
-    "Shadi",
-    "Al Milhem",
-    "Contact Shadi Al Milhem",
     "Shadi Al Milhem",
-    "shadialmilhem",
-    "Shadi Almilhem",
-    "Shadi Al Melhem",
-    "Shadi Al Milhem Portfolio",
     "شادي الملحم",
-    "شادي",
-    "shadi al melhem",
-    "shadi almelhem",
-    "shadi al milhem",
-    "web developer",
-    "frontend developer",
-    "backend developer",
-    "full stack developer",
-    "software engineer",
-    "portfolio",
-    "Next.js",
-    "UI/UX",
-    "web design",
-    "responsive design",
-    "SEO",
-    "open source",
+    "شادي اياد الملحم",
+    "contact web developer",
+    "hire full stack developer",
+    "Next.js expert",
+    "UI/UX consultant",
+    "responsive web design specialist",
+    "web development services",
+    "freelance web developer",
+    "Arabic web developer",
+    "international web projects",
   ],
   icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
-    canonical: "/contact",
+    canonical: "https://shadialmilhem.com/contact",
+  },
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Shadi Al Milhem",
+    alternateName: "شادي الملحم",
+    url: "https://shadialmilhem.com/contact",
+    jobTitle: "Full Stack Web Developer",
+    description:
+      "Shadi Al Milhem is a Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
+    image: "https://shadialmilhem.com/SH-logo.png",
+    sameAs: [
+      "https://github.com/shadi-almilhem",
+      "https://www.linkedin.com/in/shadi-al-milhem",
+      "https://x.com/shadi_m02",
+    ],
   },
 };
 function page() {

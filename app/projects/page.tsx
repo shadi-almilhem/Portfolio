@@ -5,42 +5,58 @@ import ProjectsShow from "./ProjectsShow";
 import { ProjectProvider } from "./ProjectContext";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { Metadata } from "next";
-export const metadata: Metadata = {
+interface ExtendedMetadata extends Metadata {
+  additionalMetaTags?: { name: string; content: string }[];
+  structuredData?: { [key: string]: any };
+}
+export const metadata: ExtendedMetadata = {
   metadataBase: new URL(`https://shadialmilhem.com`),
 
-  title: "Projects | Shadi Al Milhem",
-  description: "Projects by Shadi Al Milhem",
+  title: "Projects",
+  description: "Projects by Shadi Al Milhem (شادي الملحم)",
   keywords: [
-    "Shadi",
-    "Al Milhem",
-    "Projects by Shadi Al Milhem",
     "Shadi Al Milhem",
-    "shadialmilhem",
-    "Shadi Almilhem",
-    "Shadi Al Melhem",
-    "Shadi Al Milhem Portfolio",
     "شادي الملحم",
-    "شادي",
-    "shadi al melhem",
-    "shadi almelhem",
-    "shadi al milhem",
-    "web developer",
-    "frontend developer",
-    "backend developer",
-    "full stack developer",
-    "software engineer",
-    "portfolio",
-    "Next.js",
-    "UI/UX",
-    "web design",
-    "responsive design",
-    "SEO",
-    "open source",
+    "شادي اياد الملحم",
+    "web development projects",
+    "Next.js projects",
+    "full stack applications",
+    "UI/UX portfolio",
+    "responsive web design examples",
+    "SEO-optimized websites",
+    "software engineering portfolio",
+    "Arabic web developer projects",
+    "international web solutions",
+    "custom web applications",
+    "JavaScript projects",
+    "React applications",
+    "Node.js projects",
+    "database-driven websites",
+    "API integration examples",
+    "performance-optimized sites",
+    "cross-platform web apps",
+    "mobile-first design portfolio",
   ],
   icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
   alternates: {
-    canonical: "/projects",
+    canonical: "https://shadialmilhem.com/projects",
+  },
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Shadi Al Milhem",
+    alternateName: "شادي الملحم",
+    url: "https://shadialmilhem.com/projects",
+    jobTitle: "Full Stack Web Developer",
+    description:
+      "Shadi Al Milhem is a Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
+    image: "https://shadialmilhem.com/SH-logo.png",
+    sameAs: [
+      "https://github.com/shadi-almilhem",
+      "https://www.linkedin.com/in/shadi-al-milhem",
+      "https://x.com/shadi_m02",
+    ],
   },
 };
 function Page() {
