@@ -1,17 +1,28 @@
 "use client";
+import React, { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { Bodoni_Moda } from "next/font/google";
 import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
-import { Spotlight } from "@/components/ui/Spotlight";
-import { useSprings, animated } from "react-spring";
-import GridPattern from "@/components/ui/GridPattern";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
+import AnimatedContent from "./AnimatedContent";
+
+// Dynamic imports
+const DynamicSpotlight = dynamic(
+  () => import("@/components/ui/Spotlight").then((mod) => mod.Spotlight),
+  {
+    ssr: false,
+  },
+);
+const DynamicGridPattern = dynamic(
+  () => import("@/components/ui/GridPattern"),
+  { ssr: false },
+);
 
 export const metadata: Metadata = {
   title: "Shadi Al Milhem",
@@ -135,44 +146,31 @@ const Hero = () => {
     },
   ];
 
-  const springs = useSprings(
-    items.length,
-    items.map((_, index) => ({
-      from: { opacity: 0, transform: "translateY(30px)", filter: "blur(20px)" },
-      to: { opacity: 1, transform: "translateY(0)", filter: "blur(0px)" },
-      delay: index * 180,
-      config: { duration: 200 },
-    })),
-  );
-
   return (
     <section className="max-container relative z-40 mt-32 flex w-full flex-col flex-wrap items-center gap-6  md:mt-36 md:gap-8 lg:mt-48">
-      <GridPattern
-        width={80}
-        height={80}
-        x={-1}
-        y={-1}
-        className={cn(
-          " [mask-image:radial-gradient(ellipse_at_center,transparent_10%,white,transparent_70%)]",
-        )}
-      />
-      <Spotlight
-        className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"
-        fill="white"
-      />
-      <Spotlight className="top-36 h-screen w-full md:-top-0" fill="#c354ff" />
+      <Suspense fallback={<div>Loading...</div>}>
+        <DynamicGridPattern
+          width={80}
+          height={80}
+          x={-1}
+          y={-1}
+          className={cn(
+            " [mask-image:radial-gradient(ellipse_at_center,transparent_10%,white,transparent_70%)]",
+          )}
+        />
+        <DynamicSpotlight
+          className="-top-30 md:left-30 left-0 h-screen w-full md:-top-60"
+          fill="white"
+        />
+        <DynamicSpotlight
+          className="top-36 h-screen w-full md:-top-0"
+          fill="#c354ff"
+        />
 
-      <div className="sm:stars z-[-5]"></div>
+        <div className="sm:stars z-[-5]"></div>
 
-      {springs.map((springStyle, index) => (
-        <animated.div
-          style={springStyle}
-          className="flex w-full flex-col items-center justify-center text-center"
-          key={items[index].key}
-        >
-          {items[index].content}
-        </animated.div>
-      ))}
+        <AnimatedContent items={items} />
+      </Suspense>
     </section>
   );
 };
