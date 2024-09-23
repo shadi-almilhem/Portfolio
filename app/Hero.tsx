@@ -117,13 +117,15 @@ const Hero = () => {
 
           <Link
             className="medium-12 md:medium-14 lg:medium-16 w-[80%] md:w-fit"
-            href="/pdf/Shadi-Al-Milhem-CV.pdf"
+            href="/Shadi-Al-Milhem-CV.pdf"
             aria-label="Download CV"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Button
               aria-label="Download CV"
               variant="secondary"
-              className="gradient-s-button w-full rounded-full  py-4 text-white md:px-5"
+              className="w-full rounded-full border-2  py-5 text-white md:px-6"
             >
               Download CV <Download className="ml-2 h-4 w-4" />
             </Button>

@@ -34,7 +34,7 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
     <span className="absolute mx-2 md:-bottom-3 md:-right-28 lg:-right-[7.5rem] lg:bottom-0 2xl:-right-32">
       <Image
         src={profileImageUrl}
-        alt="Shadi image"
+        alt="Shadi image شادي الملحم"
         priority={true}
         width={640}
         height={751}

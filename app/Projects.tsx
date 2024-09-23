@@ -77,9 +77,9 @@ function Projects() {
           <Button
             aria-label="See More Projects"
             variant="secondary"
-            className="w-full px-4   py-6 text-center text-white md:px-14  md:py-5"
+            className="w-full px-4   py-6 text-center text-white md:px-14  md:py-6"
           >
-            See More
+            See More Projects
           </Button>
         </Link>
       </div>

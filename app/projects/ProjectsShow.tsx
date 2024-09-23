@@ -93,7 +93,7 @@ function ProjectsShow() {
             onClick={handleSeeMore}
             disabled={visibleProjects.length >= projects.length}
           >
-            See More
+            See More Projects
           </Button>
         )}
       </div>
