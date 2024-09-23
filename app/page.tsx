@@ -91,13 +91,8 @@ export const metadata: ExtendedMetadata = {
   },
 };
 
-const DynamicHero = dynamic(() => import("./Hero"), {
-  loading: () => (
-    <div className="flex flex-col space-y-3">
-      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-    </div>
-  ),
-});
+import Hero from "./Hero";
+
 const DynamicProject = dynamic(() => import("./Projects"), {
   loading: () => (
     <div className="flex flex-col space-y-3">
@@ -126,6 +121,7 @@ const DynamicAboutMe = dynamic(() => import("./AboutMe"), {
       <Skeleton className="h-[125px] w-[250px] rounded-xl" />
     </div>
   ),
+  ssr: false,
 });
 const DynamicStack = dynamic(() => import("./Stacks"), {
   loading: () => (
@@ -133,6 +129,7 @@ const DynamicStack = dynamic(() => import("./Stacks"), {
       <Skeleton className="h-[125px] w-[250px] rounded-xl" />
     </div>
   ),
+  ssr: false,
 });
 const DynamicRotationGlow = dynamic(
   () => import("@/components/ui/RotatingGlow"),
@@ -142,13 +139,14 @@ const DynamicRotationGlow = dynamic(
         <Skeleton className="h-[125px] w-[250px] rounded-xl" />
       </div>
     ),
+    ssr: false,
   },
 );
 export default function Home() {
   return (
     <ProjectProvider>
       <main className="  flex w-full  flex-col items-center justify-between gap-28 ">
-        <DynamicHero />
+        <Hero />
         <DynamicProject />
         <DynamicServices />
         <DynamicAboutMe />

@@ -132,6 +132,7 @@ const Hero = () => {
             aria-label="Download CV"
             target="_blank"
             rel="noopener noreferrer"
+            legacyBehavior
           >
             <Button
               aria-label="Download CV"
