@@ -114,7 +114,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="max-container relative z-40 mt-32 flex w-full flex-col flex-wrap items-center gap-6  md:mt-36 md:gap-8 lg:mt-48">
+    <section className="max-container relative z-40 mt-32 flex w-full flex-col flex-wrap items-center gap-6  md:mt-36 md:gap-4 lg:mt-48">
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicGridPattern
           width={80}
