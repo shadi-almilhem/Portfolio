@@ -14,7 +14,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({ items }) => {
         <div
           key={item.key}
           className={`animatedItem flex w-full flex-col items-center justify-center text-center`}
-          style={{ animationDelay: `${index * 100}ms` }}
+          style={{ animationDelay: `${index * 250}ms` }}
         >
           {item.content}
         </div>

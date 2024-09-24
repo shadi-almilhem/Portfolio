@@ -56,7 +56,7 @@ export const metadata: ExtendedMetadata = {
     images: [
       {
         url: "https://shadialmilhem.com/SH-logo.png",
-        alt: "Shadi Al Milhem Logo",
+        alt: "Shadi Al Milhem Logo شادي الملحم",
       },
     ],
     locale: "en_US",

@@ -8,7 +8,6 @@ import { Bodoni_Moda } from "next/font/google";
 import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import AnimatedContent from "./AnimatedContent";
 
@@ -23,38 +22,6 @@ const DynamicGridPattern = dynamic(
   () => import("@/components/ui/GridPattern"),
   { ssr: false },
 );
-
-export const metadata: Metadata = {
-  title: "Shadi Al Milhem",
-  description: "Shadi Al Milhem Portfolio",
-  keywords: [
-    "Shadi",
-    "Al Milhem",
-    "Shadi Al Milhem",
-    "Shadi Almilhem",
-    "Shadi Al Melhem",
-    "Shadi Al Milhem Portfolio",
-    "شادي الملحم",
-    "شادي",
-    "shadi al melhem",
-    "shadi almelhem",
-    "shadi al milhem",
-    "web developer",
-    "frontend developer",
-    "backend developer",
-    "full stack developer",
-    "software engineer",
-    "portfolio",
-    "Next.js",
-    "UI/UX",
-    "web design",
-    "responsive design",
-    "SEO",
-    "open source",
-  ],
-  icons: { icon: "/icon.ico" },
-  creator: "Shadi Al Milhem",
-};
 
 const bodoni_moda = Bodoni_Moda({
   subsets: ["latin"],
@@ -75,7 +42,7 @@ const Hero = () => {
             priority={true}
             width={256}
             height={300}
-            alt="Shadi Al Milhem image"
+            alt="Shadi Al Milhem image شادي الملحم"
             className="image-gradient-border h-auto w-20 justify-center rounded-lg bg-contain md:hidden"
           />
         </div>
