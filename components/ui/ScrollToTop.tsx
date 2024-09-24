@@ -1,24 +1,35 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import { throttle } from "lodash";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const toggleVisibility = throttle(() => {
-      setIsVisible(window.scrollY > 2000);
-    }, 100);
+  const throttle = (func: any, delay: any) => {
+    let lastCall = 0;
+    return (...args: any) => {
+      const now = new Date().getTime();
+      if (now - lastCall < delay) return;
+      lastCall = now;
+      return func(...args);
+    };
+  };
 
+  const toggleVisibility = useCallback(
+    throttle(() => {
+      setIsVisible(window.scrollY > 2000);
+    }, 100),
+    [],
+  );
+
+  useEffect(() => {
     window.addEventListener("scroll", toggleVisibility, { passive: true });
 
     return () => {
-      toggleVisibility.cancel();
       window.removeEventListener("scroll", toggleVisibility);
     };
-  }, []);
+  }, [toggleVisibility]);
 
   const scrollToTop = () => {
     window.scrollTo({
