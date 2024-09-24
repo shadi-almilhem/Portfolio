@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+import React from "react";
+import Image from "next/image";
 import { Bodoni_Moda } from "next/font/google";
 
 // Initialize the font outside of the component
@@ -9,10 +9,8 @@ const bodoni_moda = Bodoni_Moda({
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
   adjustFontFallback: false,
+  preload: true,
 });
-
-// Dynamically import the Image component
-const Image = dynamic(() => import("next/image"), { ssr: true });
 
 // Preload the image
 const profileImageUrl = "/profileImage.webp";
@@ -22,13 +20,7 @@ type HeadingProps = {
 };
 
 function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!imagePlace || !isMounted) return null;
+  if (!imagePlace) return null;
 
   return (
     <span className="absolute mx-2 md:-bottom-3 md:-right-28 lg:-right-[7.5rem] lg:bottom-0 2xl:-right-32">
