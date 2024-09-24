@@ -76,9 +76,9 @@ function ContactForm() {
         <Link aria-label="Email Me" href="mailto:contact@shadialmilhem.com">
           <Button
             aria-label="Email Me"
-            className=" flex w-full items-center gap-2 rounded-md bg-white/95 text-sm font-semibold     uppercase text-black duration-300 hover:bg-white"
+            className=" flex w-full items-center gap-2 rounded-md bg-white/95 text-sm font-semibold      text-black duration-300 hover:bg-white"
           >
-            Email Me <Mail strokeWidth={2.5} className=" ml-2 h-auto w-4   " />
+            Email Me <Mail strokeWidth={2.5} className="  h-auto w-4    " />
           </Button>
         </Link>
         <Link
@@ -87,9 +87,9 @@ function ContactForm() {
         >
           <Button
             aria-label="Schedule a call"
-            className="flex w-full  items-center gap-2 rounded-md bg-white/95  text-sm font-semibold uppercase text-black duration-300 hover:bg-white"
+            className="flex w-full  items-center gap-2 rounded-md bg-white/95  text-sm font-semibold  text-black duration-300 hover:bg-white"
           >
-            Schedule a call{" "}
+            Schedule a Call
             <Calendar strokeWidth={2.5} className="h-auto w-4   " />
           </Button>
         </Link>
@@ -161,7 +161,7 @@ function ContactForm() {
 
           <Button
             aria-label="Send Email"
-            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold  uppercase text-black duration-300 hover:bg-white"
+            className="inline-flex w-full items-center justify-center gap-1 rounded-md bg-white/90 px-4 py-3 text-sm font-semibold   text-black duration-300 hover:bg-white"
             type="submit"
           >
             Send
