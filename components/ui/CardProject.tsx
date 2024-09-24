@@ -36,7 +36,7 @@ export function CardProject({
           </Link>
         </div>
         <div className="flex flex-1 flex-col py-5">
-          <h3 className="mb-2  text-xl font-bold tracking-tight text-white">
+          <h3 className="mb-2  text-xl font-semibold tracking-tight text-white">
             {heading}
           </h3>
           <HoverCard>
@@ -54,7 +54,7 @@ export function CardProject({
               href={websiteLink || src}
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-2 inline-flex w-full items-start justify-start rounded-md  py-3 text-sm font-bold    uppercase text-white underline underline-offset-2 transition-all duration-300 hover:text-white/80 hover:underline-offset-4"
+              className="mb-2 inline-flex w-full items-start justify-start rounded-md  py-3 text-sm font-semibold    uppercase text-white underline underline-offset-2 transition-all duration-300 hover:text-white/80 hover:underline-offset-4"
             >
               Open
             </Link>

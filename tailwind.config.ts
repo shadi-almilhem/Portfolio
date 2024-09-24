@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors, { transparent } from "tailwindcss/colors";
 const svgToDataUri = require("mini-svg-data-uri");
 
 const {
@@ -80,7 +79,6 @@ const config = {
         },
       },
       fontSize: {
-        "medium-20": "1.25rem", // 20px
         "medium-32": "2rem", // 32px
         "medium-40": "2.5rem", // 40px
         "medium-52": "3.25rem", // 52px
@@ -148,8 +146,6 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine 2s linear infinite",
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
-        backgroundPositionSpin:
-          "background-position-spin 3000ms infinite alternate",
       },
     },
   },

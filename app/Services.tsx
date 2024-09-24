@@ -63,7 +63,7 @@ function Services() {
                 <div className={`gradient-bg rounded-md  p-2 `}>
                   {service.icon}
                 </div>
-                <h3 className=" text-xl font-bold text-white">
+                <h3 className=" text-xl font-semibold text-white">
                   {service.title}
                 </h3>
               </div>

@@ -29,7 +29,7 @@ function Cta() {
           {/* Component */}
           <div className="mx-auto w-full rounded-[60px] px-4">
             <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center text-center max-[479px]:px-2">
-              <h2 className="my-8 px-4 text-2xl font-extrabold text-white sm:px-10 sm:text-3xl md:px-20 md:text-5xl md:leading-[4rem] lg:px-24">
+              <h2 className="my-8 px-4 text-2xl font-semibold text-white sm:px-10 sm:text-3xl md:px-20 md:text-5xl md:leading-[4rem] lg:px-24">
                 Transform Your Vision into Reality
                 <span className="inline-block align-middle">
                   <Rocket className="h-8 w-8 px-1 md:h-12  md:w-12  " />

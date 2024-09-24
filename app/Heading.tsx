@@ -39,7 +39,7 @@ function ProfileImage({ imagePlace }: { imagePlace: boolean }) {
 function Header() {
   return (
     <h1
-      className={`text-glow gradient-text inline-block justify-center px-4 text-center font-bold ${bodoni_moda.className}`}
+      className={`text-glow gradient-text inline-block justify-center px-4 text-center font-semibold ${bodoni_moda.className}`}
       style={{ fontSize: "clamp(40px, 6vw, 88px)" }}
     >
       Shadi Al Milhem

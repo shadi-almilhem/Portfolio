@@ -32,7 +32,7 @@ function Footer() {
         <div className="flex flex-col items-center gap-4">
           <div className="">
             <h2
-              className={`text-glow gradient-text relative inline-block justify-center px-4 text-center font-bold ${bodoni_moda.className}`}
+              className={`text-glow gradient-text relative inline-block justify-center px-4 text-center font-semibold ${bodoni_moda.className}`}
               style={{ fontSize: "clamp(32px, 5vw, 72px)" }}
             >
               Shadi Al Milhem

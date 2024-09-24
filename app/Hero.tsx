@@ -1,4 +1,3 @@
-"use client";
 import React, { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
@@ -29,6 +28,7 @@ const bodoni_moda = Bodoni_Moda({
   display: "swap",
   fallback: ["Arial", "Times New Roman"],
   adjustFontFallback: false,
+  preload: true,
 });
 
 const Hero = () => {

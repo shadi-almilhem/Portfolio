@@ -27,49 +27,50 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   color: white;
 }
-@media (min-width: 768px) {
-  /* Adjust the min-width value based on the 'md' breakpoint you've set in Tailwind CSS */
-}
-.image-gradient-border {
-  background:
-    linear-gradient(#efefef87, #fbe1fed0) padding-box,
-    linear-gradient(to bottom, #efefefa0, #fbe1fed0) border-box;
-  border: 4px solid transparent;
-}
-.gradient-button {
-  border: 2px solid;
-  border-color: #db99ff;
-  background: linear-gradient(180deg, #d080ff 20.41%, #b833ff 100%);
 
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
-.gradient-bg {
-  background: linear-gradient(180deg, #d080ff 10.41%, #b833ff 100%);
-}
-@media (hover: hover) and (pointer: fine) {
-  .gradient-button:hover {
-    transform: translateY(-2px); /* Slight raise effect */
-    box-shadow:
-      0 10px 20px rgba(179, 42, 254, 0.4),
-      inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5); /* Inset Shadow */
-  }
-}
-.gradient-s-button {
-  border: 2px solid;
-  border-color: #fdf7ff75;
-  background: linear-gradient(180deg, #464646 26.39%, #323232 100%);
-
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
-.gradient-s-button:hover {
-  transform: translateY(-2px); /* Slight raise effect */
-  box-shadow: 0 10px 20px rgba(94, 94, 94, 0.094); /* Shadow effect */
-}
 @layer utilities {
+  @media (min-width: 768px) {
+    /* Adjust the min-width value based on the 'md' breakpoint you've set in Tailwind CSS */
+  }
+  .image-gradient-border {
+    background:
+      linear-gradient(#efefef87, #fbe1fed0) padding-box,
+      linear-gradient(to bottom, #efefefa0, #fbe1fed0) border-box;
+    border: 4px solid transparent;
+  }
+  .gradient-button {
+    border: 2px solid;
+    border-color: #db99ff;
+    background: linear-gradient(180deg, #d080ff 20.41%, #b833ff 100%);
+
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
+  .gradient-bg {
+    background: linear-gradient(180deg, #d080ff 10.41%, #b833ff 100%);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .gradient-button:hover {
+      transform: translateY(-2px); /* Slight raise effect */
+      box-shadow:
+        0 10px 20px rgba(179, 42, 254, 0.4),
+        inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5); /* Inset Shadow */
+    }
+  }
+  .gradient-s-button {
+    border: 2px solid;
+    border-color: #fdf7ff75;
+    background: linear-gradient(180deg, #464646 26.39%, #323232 100%);
+
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
+  .gradient-s-button:hover {
+    transform: translateY(-2px); /* Slight raise effect */
+    box-shadow: 0 10px 20px rgba(94, 94, 94, 0.094); /* Shadow effect */
+  }
   .arrow {
     transition:
       transform 0.3s ease-in-out,
@@ -132,24 +133,6 @@ select:-webkit-autofill:focus {
       #101010 0px 0px 80px 30px inset,
       rgba(255, 255, 255, 0.05) 0px 10px 100px -10px;
   }
-  .gradient-full {
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    display: flex;
-    z-index: -4;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    background: #000000;
-    mask-image: radial-gradient(ellipse at center, transparent 20%, black 100%);
-  }
-  .gradient-border {
-    border-color: linear-gradient(45deg, purple, orange) 1;
-  }
-  .flexCenter {
-    @apply flex items-center justify-center;
-  }
 
   .flexBetween {
     @apply flex items-center justify-between;
@@ -158,28 +141,7 @@ select:-webkit-autofill:focus {
     @apply mx-auto max-w-[1440px];
   }
 
-  .padding-container {
-    @apply px-6 lg:px-20 2xl:px-0;
-  }
-  .flexStart {
-    @apply flex items-center justify-start;
-  }
-
-  .flexEnd {
-    @apply flex items-center justify-end;
-  }
   /* FONTS */
-  .regular-64 {
-    @apply text-[64px] font-[400] leading-[120%];
-  }
-
-  .regular-40 {
-    @apply text-[40px] font-[400] leading-[120%];
-  }
-
-  .regular-32 {
-    @apply text-[32px] font-[400];
-  }
 
   .regular-24 {
     @apply text-[24px] font-[400];
@@ -189,17 +151,10 @@ select:-webkit-autofill:focus {
     @apply text-[20px] font-[400];
   }
 
-  .regular-18 {
-    @apply text-[18px] font-[400];
-  }
-
   .regular-16 {
     @apply text-[16px] font-[400];
   }
 
-  .regular-14 {
-    @apply text-[14px] font-[400];
-  }
   .medium-14 {
     @apply text-[14px] font-[600];
   }
@@ -223,36 +178,6 @@ select:-webkit-autofill:focus {
 
   .medium-32 {
     @apply text-[32px] font-[500] leading-[130%];
-  }
-  .medium-20 {
-    @apply text-[20px] font-[600];
-  }
-  .bold-88 {
-    @apply text-[88px] font-[700] leading-[130%];
-  }
-
-  .bold-64 {
-    @apply text-[64px] font-[700] leading-[130%];
-  }
-
-  .bold-52 {
-    @apply text-[52px] font-[700] leading-[130%];
-  }
-
-  .bold-40 {
-    @apply text-[40px] font-[700] leading-[130%];
-  }
-
-  .bold-32 {
-    @apply text-[32px] font-[500] leading-[130%];
-  }
-
-  .bold-20 {
-    @apply text-[20px] font-[700];
-  }
-
-  .bold-18 {
-    @apply text-[18px] font-[500];
   }
 
   .bold-16 {
@@ -300,14 +225,7 @@ select:-webkit-autofill:focus {
       opacity: 0;
     }
   }
-  .test-bg {
-    background: radial-gradient(
-      circle,
-      rgba(128, 0, 128, 1) 0%,
-      rgba(138, 43, 226, 1) 50%,
-      rgba(75, 0, 130, 1) 100%
-    );
-  }
+
   .purple-ping {
     animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
     border-radius: 100%;
