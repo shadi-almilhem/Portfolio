@@ -95,7 +95,7 @@ const Hero = () => {
 
           <Link
             className="medium-12 md:medium-14 lg:medium-16 w-[80%] "
-            href={"Shadi_Al_Milhem_CV.pdf"}
+            href={"/Shadi_Al_Milhem_CV.pdf"}
             aria-label="Download CV"
             target="_blank"
             rel="noopener noreferrer"
