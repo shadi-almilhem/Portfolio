@@ -71,13 +71,13 @@ function Projects() {
         </div>
         <Link
           aria-label="projects"
-          className="medium-12 gradient-s-button md:medium-14 lg:medium-16  w-full  rounded-full  md:w-fit"
+          className="medium-12 gradient-s-button md:medium-14 lg:medium-16 w-full rounded-full px-16 md:w-fit  md:py-1"
           href="/projects"
         >
           <Button
             aria-label="See More Projects"
             variant="secondary"
-            className="w-full px-4   py-6 text-center text-white md:px-14  md:py-6"
+            className="w-full   text-center text-white  "
           >
             See More Projects
           </Button>
