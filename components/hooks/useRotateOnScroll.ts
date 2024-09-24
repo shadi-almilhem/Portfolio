@@ -6,7 +6,7 @@ const useRotateOnScroll = (ref: React.RefObject<HTMLElement>) => {
     const handleScroll = () => {
       if (ref.current) {
         const rotation = window.scrollY / 50;
-        ref.current.style.transform = `rotate(${rotation * 0.1}deg)`;
+        ref.current.style.transform = `rotate(${rotation * -0.1}deg)`;
       }
     };
 

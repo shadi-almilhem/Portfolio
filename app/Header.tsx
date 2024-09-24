@@ -79,7 +79,7 @@ function Header() {
         >
           <Link aria-label="Logo" href="/">
             <Image
-              className=" -rotate-[22deg]"
+              className=" "
               src={logo}
               alt="logo"
               priority={true}
