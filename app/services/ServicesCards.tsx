@@ -6,18 +6,11 @@ import {
   Paintbrush,
   PanelsTopLeft,
 } from "lucide-react";
-import { Bodoni_Moda } from "next/font/google";
+import { bodoni_moda } from "@/fonts";
 import Link from "next/link";
 import React from "react";
 import Particles from "@/components/ui/particles";
 
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
 const services = [
   {
     title: "Web Design",

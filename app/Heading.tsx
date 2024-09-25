@@ -1,16 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Bodoni_Moda } from "next/font/google";
+import { bodoni_moda } from "@/fonts";
 
 // Initialize the font outside of the component
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-  preload: true,
-});
 
 // Preload the image
 const profileImageUrl = "/profileImage.webp";

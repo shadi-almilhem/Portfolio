@@ -3,18 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { CardProject } from "@/components/ui/CardProject";
 import { Spotlight } from "@/components/ui/Spotlight";
-import { Bodoni_Moda } from "next/font/google";
+import { bodoni_moda } from "@/fonts";
 import React, { useEffect, useState } from "react";
 import { useProjectContext } from "./ProjectContext";
 import SkeletonCard from "@/components/ui/SkeletonCard"; // Ensure this import is correct
-
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
 
 interface Project {
   title: string;

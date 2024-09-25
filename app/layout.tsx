@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
-import { Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Cta from "./Cta";
 import Footer from "./Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const nunito = Nunito_Sans({
-  subsets: ["latin"],
-  fallback: ["Arial", "Times New Roman"],
-  display: "swap",
-  adjustFontFallback: false,
-});
+import { nunito } from "@/fonts";
 
 interface ExtendedMetadata extends Metadata {
   additionalMetaTags?: { name: string; content: string }[];

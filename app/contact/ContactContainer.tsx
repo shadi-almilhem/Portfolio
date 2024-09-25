@@ -1,13 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import { Bodoni_Moda } from "next/font/google";
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
+import { bodoni_moda } from "@/fonts";
+
 function ContactContainer() {
   return (
     <section className="max-container relative z-40 mt-44 flex w-full flex-col flex-wrap items-center gap-6  sm:mt-48 md:mt-56 md:gap-8 lg:mt-60">

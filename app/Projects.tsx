@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Bodoni_Moda } from "next/font/google";
+import { bodoni_moda } from "@/fonts";
 
 import { CardProject } from "@/components/ui/CardProject";
 import { Button } from "@/components/ui/button";
@@ -8,13 +8,6 @@ import Link from "next/link";
 import { useProjectContext } from "./projects/ProjectContext";
 import SkeletonCard from "@/components/ui/SkeletonCard";
 
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
 interface Project {
   title: string;
   imageLink: string;

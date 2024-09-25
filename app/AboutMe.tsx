@@ -1,17 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import profileImage from "@/public/shadi-2.webp";
-import { Bodoni_Moda } from "next/font/google";
 import TextRevealByWord from "@/components/ui/text-reveal";
 import GridPattern from "@/components/ui/GridPattern";
 import { cn } from "@/lib/utils";
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
+import { bodoni_moda } from "@/fonts";
+
 export default function AboutMe() {
   return (
     <section className="max-container relative mb-8 flex  flex-col items-center ">

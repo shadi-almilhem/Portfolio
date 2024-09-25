@@ -1,5 +1,5 @@
 "use client";
-import { Bodoni_Moda } from "next/font/google";
+import { bodoni_moda } from "@/fonts";
 import { FiFigma } from "react-icons/fi";
 import {
   FaReact,
@@ -24,18 +24,8 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Ripple from "@/components/ui/ripple";
-
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
 
 const iconData = [
   { component: SiNextdotjs, color: "#232323", name: "Next.js" },
@@ -67,37 +57,35 @@ const rows = [
 ];
 
 function Stacks() {
-  const controls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [controls, isInView]);
+    const currentRef = ref.current;
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        duration: 0.8,
-        ease: [0.42, 0, 0.58, 1], // Cubic Bezier for smoother animation
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fade-in");
+          observer.unobserve(entry.target);
+        }
       },
-    },
-  };
+      { threshold: 0.1 },
+    );
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   return (
     <section
       ref={ref}
-      className="max-container z-40 mb-8 flex w-full flex-col items-center px-2 sm:gap-16"
+      className="max-container z-40 mb-8 flex w-full flex-col items-center px-2 opacity-0 sm:gap-16"
     >
       <h2
         className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
@@ -105,12 +93,7 @@ function Stacks() {
         My Stack
       </h2>
       <TooltipProvider delayDuration={100}>
-        <motion.div
-          className="flex scale-[0.85] flex-col items-center sm:scale-100"
-          initial="hidden"
-          animate={controls}
-          variants={containerVariants}
-        >
+        <div className="flex scale-[0.85] flex-col items-center sm:scale-100">
           {rows.map((row, rowIndex) => (
             <div key={rowIndex} className="flex justify-center">
               {row.map((iconIndex) => {
@@ -120,10 +103,10 @@ function Stacks() {
                   name,
                 } = iconData[iconIndex];
                 return (
-                  <motion.div
+                  <div
                     key={name}
-                    variants={itemVariants}
-                    className="relative flex items-center justify-center"
+                    className="animate-fade-in relative flex items-center justify-center"
+                    style={{ animationDelay: `${iconIndex * 0.1}s` }}
                   >
                     <Tooltip>
                       <TooltipTrigger
@@ -142,12 +125,12 @@ function Stacks() {
                         </p>
                       </TooltipContent>
                     </Tooltip>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
           ))}
-        </motion.div>
+        </div>
       </TooltipProvider>
     </section>
   );

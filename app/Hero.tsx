@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Bodoni_Moda } from "next/font/google";
 import profileImage from "@/public/profileImage.webp";
 import Heading from "./Heading";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import AnimatedContent from "./AnimatedContent";
+import { bodoni_moda } from "@/fonts";
 
 // Dynamic imports
 const DynamicSpotlight = dynamic(
@@ -21,15 +21,6 @@ const DynamicGridPattern = dynamic(
   () => import("@/components/ui/GridPattern"),
   { ssr: false },
 );
-
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-  preload: true,
-});
 
 const Hero = () => {
   const items = [

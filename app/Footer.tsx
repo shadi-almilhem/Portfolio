@@ -4,14 +4,8 @@ import React from "react";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import { Bodoni_Moda } from "next/font/google";
-const bodoni_moda = Bodoni_Moda({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  display: "swap",
-  fallback: ["Arial", "Times New Roman"],
-  adjustFontFallback: false,
-});
+import { bodoni_moda } from "@/fonts";
+
 const NAV_LINKS = [
   { name: "Home", link: "/" },
   { name: "Projects", link: "/projects" },
