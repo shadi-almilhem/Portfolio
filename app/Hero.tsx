@@ -93,21 +93,21 @@ const Hero = () => {
             </Button>
           </Link>
 
-          <Link
-            className="medium-12 md:medium-14 lg:medium-16 w-[80%] "
-            href={"/Shadi_Al_Milhem_CV.pdf"}
-            aria-label="Download CV"
+          <a
+            className="medium-12 md:medium-14 lg:medium-16 w-[80%]"
+            href="/Shadi_Al_Milhem_CV.pdf"
+            download="Shadi_Al_Milhem_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
               aria-label="Download CV"
               variant="secondary"
-              className="w-full rounded-full border-2  py-5 text-white md:px-6"
+              className="w-full rounded-full border-2 py-5 text-white md:px-6"
             >
               Download CV <Download className="ml-2 h-4 w-4" />
             </Button>
-          </Link>
+          </a>
         </div>
       ),
     },
