@@ -1,14 +1,13 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { ArrowUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const throttle = (func: any, delay: any) => {
+  const throttle = (func: Function, delay: number) => {
     let lastCall = 0;
-    return (...args: any) => {
+    return (...args: any[]) => {
       const now = new Date().getTime();
       if (now - lastCall < delay) return;
       lastCall = now;
@@ -16,20 +15,24 @@ const ScrollToTop = () => {
     };
   };
 
-  const toggleVisibility = useCallback(
-    throttle(() => {
-      setIsVisible(window.scrollY > 2000);
-    }, 100),
-    [],
+  const checkVisibility = useCallback(() => {
+    setIsVisible(window.scrollY > 1500);
+  }, []);
+
+  const throttledCheckVisibility = useMemo(
+    () => throttle(checkVisibility, 100),
+    [checkVisibility],
   );
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    window.addEventListener("scroll", throttledCheckVisibility, {
+      passive: true,
+    });
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("scroll", throttledCheckVisibility);
     };
-  }, [toggleVisibility]);
+  }, [throttledCheckVisibility]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -39,11 +42,12 @@ const ScrollToTop = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 200 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 200 }}
-      transition={{ duration: 0.3 }}
-      className="fixed bottom-10 right-10 z-50"
+    <div
+      className={`fixed bottom-10 right-10 z-50 transition-all duration-300 ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-20 opacity-0"
+      }`}
     >
       <button
         aria-label="Scroll To Top"
@@ -52,7 +56,7 @@ const ScrollToTop = () => {
       >
         <ArrowUp />
       </button>
-    </motion.div>
+    </div>
   );
 };
 
