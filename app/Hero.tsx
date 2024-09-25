@@ -60,7 +60,7 @@ const Hero = () => {
         <p className="lg:regular-24 md:regular-20 regular-16 mx-8 text-wrap text-center text-white/80 lg:w-[26rem]">
           With 3 years experience.
           <br /> Crafting
-          <span className={`text-glow gradient-text px-2 font-black italic`}>
+          <span className={`text-glow gradient-text px-2 font-bold italic`}>
             unforgettable
           </span>
           websites for your online identity.
