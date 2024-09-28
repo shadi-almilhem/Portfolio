@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
-import { Analytics } from "@vercel/analytics/react";
 import Cta from "./Cta";
 import Footer from "./Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { nunito } from "@/fonts";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 
@@ -126,10 +124,8 @@ export default function RootLayout({
         />
         <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full overflow-x-hidden rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
         <main className="w-full">{children}</main>
-        <SpeedInsights />
         <Cta />
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
