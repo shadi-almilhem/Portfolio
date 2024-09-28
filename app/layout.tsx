@@ -6,6 +6,7 @@ import Cta from "./Cta";
 import Footer from "./Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { nunito } from "@/fonts";
+import { OpenPanelComponent } from "@openpanel/nextjs";
 
 interface ExtendedMetadata extends Metadata {
   additionalMetaTags?: { name: string; content: string }[];
@@ -117,6 +118,12 @@ export default function RootLayout({
         className={`${nunito.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010]`}
       >
         <Header />
+        <OpenPanelComponent
+          clientId="32ebbc7b-0380-40d0-b995-b5a361dd6238"
+          trackScreenViews={true}
+          trackAttributes={true}
+          trackOutgoingLinks={true}
+        />
         <div className="radial-gradient absolute top-[-15rem] -z-30 h-[30rem] w-full overflow-x-hidden rounded-full blur-[8rem] sm:h-[35rem] md:h-[40rem]"></div>
         <main className="w-full">{children}</main>
         <SpeedInsights />
