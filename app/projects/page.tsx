@@ -14,7 +14,7 @@ export const metadata: ExtendedMetadata = {
 
   title: "Projects",
   description:
-    "Explore Shadi Al Milhem’s (شادي الملحم) web design and development projects using Next.js, Tailwind CSS, and Figma. Discover user-centric digital experiences.",
+    "Explore Shadi Al Milhem’s (شادي الملحم) web design projects using Next.js, Tailwind CSS, and Figma.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",

@@ -12,7 +12,7 @@ export const metadata: ExtendedMetadata = {
 
   title: "Contact",
   description:
-    "Reach out to Shadi Al Milhem (شادي الملحم) for collaborations or inquiries. Connect with a web designer and front-end developer specializing in Next.js and Tailwind CSS.",
+    "Contact Shadi Al Milhem (شادي الملحم) for collaborations or inquiries. Specializes in Next.js and Tailwind CSS.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",
