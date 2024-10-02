@@ -14,7 +14,7 @@ export const metadata: ExtendedMetadata = {
 
   title: "Projects",
   description:
-    "Discover the innovative web design and front-end development projects by Shadi Al Milhem (شادي الملحم). Utilizing Next.js, Tailwind CSS, and Figma, Shadi creates user-centric digital experiences. Explore Shadi’s portfolio to see cutting-edge designs and seamless user interfaces.",
+    "Explore Shadi Al Milhem’s (شادي الملحم) web design and development projects using Next.js, Tailwind CSS, and Figma. Discover user-centric digital experiences.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",
@@ -23,6 +23,8 @@ export const metadata: ExtendedMetadata = {
     "Next.js projects",
     "full stack applications",
     "UI/UX portfolio",
+    "Syrian web developer",
+
     "responsive web design examples",
     "SEO-optimized websites",
     "software engineering portfolio",

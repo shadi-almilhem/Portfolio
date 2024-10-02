@@ -12,12 +12,14 @@ export const metadata: ExtendedMetadata = {
 
   title: "Contact",
   description:
-    "Contact Shadi Al Milhem (شادي الملحم) for collaboration, inquiries, or project discussions. Connect with a skilled web designer and front-end developer specializing in Next.js, Tailwind CSS, and Figma. Reach out to Shadi for exceptional digital solutions.",
+    "Reach out to Shadi Al Milhem (شادي الملحم) for collaborations or inquiries. Connect with a web designer and front-end developer specializing in Next.js and Tailwind CSS.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",
     "شادي اياد الملحم",
     "contact web developer",
+    "Syrian web developer",
+
     "hire full stack developer",
     "Next.js expert",
     "UI/UX consultant",
