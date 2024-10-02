@@ -13,7 +13,8 @@ export const metadata: ExtendedMetadata = {
   metadataBase: new URL(`https://shadialmilhem.com`),
 
   title: "Projects",
-  description: "Projects by Shadi Al Milhem (شادي الملحم)",
+  description:
+    "Discover the innovative web design and front-end development projects by Shadi Al Milhem (شادي الملحم). Utilizing Next.js, Tailwind CSS, and Figma, Shadi creates user-centric digital experiences. Explore Shadi’s portfolio to see cutting-edge designs and seamless user interfaces.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",

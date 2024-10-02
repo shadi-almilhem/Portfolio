@@ -105,13 +105,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr">
-      <head>
-        <link
-          rel="alternate"
-          hrefLang="ar"
-          href="https://shadialmilhem.com/ar"
-        />
-      </head>
       <body
         className={`${nunito.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010]`}
       >

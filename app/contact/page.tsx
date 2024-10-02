@@ -11,7 +11,8 @@ export const metadata: ExtendedMetadata = {
   metadataBase: new URL(`https://shadialmilhem.com`),
 
   title: "Contact",
-  description: "Contact Shadi Al Milhem (شادي الملحم)",
+  description:
+    "Contact Shadi Al Milhem (شادي الملحم) for collaboration, inquiries, or project discussions. Connect with a skilled web designer and front-end developer specializing in Next.js, Tailwind CSS, and Figma. Reach out to Shadi for exceptional digital solutions.",
   keywords: [
     "Shadi Al Milhem",
     "شادي الملحم",
