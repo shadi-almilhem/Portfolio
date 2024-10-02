@@ -39,6 +39,20 @@ export const metadata: ExtendedMetadata = {
     "mobile-first design portfolio",
   ],
   icons: { icon: "/icon.ico" },
+  openGraph: {
+    title: "Shadi Al Milhem Projects (شادي الملحم)",
+    description:
+      "Discover the innovative web design and front-end development projects by Shadi Al Milhem (شادي الملحم).",
+    url: "https://shadialmilhem.com/projects",
+    images: [
+      {
+        url: "https://shadialmilhem.com/SH-logo.png",
+        alt: "Shadi Al Milhem Logo شادي الملحم",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   creator: "Shadi Al Milhem",
   alternates: {
     canonical: "https://shadialmilhem.com/projects",

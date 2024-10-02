@@ -32,6 +32,20 @@ export const metadata: ExtendedMetadata = {
   alternates: {
     canonical: "https://shadialmilhem.com/contact",
   },
+  openGraph: {
+    title: "Contact Shadi Al Milhem (شادي الملحم)",
+    description:
+      "Contact Shadi Al Milhem (شادي الملحم) for collaboration, inquiries, or project discussions.",
+    url: "https://shadialmilhem.com/contact",
+    images: [
+      {
+        url: "https://shadialmilhem.com/SH-logo.png",
+        alt: "Shadi Al Milhem Logo شادي الملحم",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   structuredData: {
     "@context": "https://schema.org",
     "@type": "Person",

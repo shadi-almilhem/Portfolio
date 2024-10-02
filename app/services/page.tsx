@@ -43,6 +43,20 @@ export const metadata: ExtendedMetadata = {
   alternates: {
     canonical: "https://shadialmilhem.com/services",
   },
+  openGraph: {
+    title: "Shadi Al Milhem Services (شادي الملحم)",
+    description:
+      "Explore the professional services offered by Shadi Al Milhem (شادي الملحم), including web design, UX/UI design, and front-end development.",
+    url: "https://shadialmilhem.com/services",
+    images: [
+      {
+        url: "https://shadialmilhem.com/SH-logo.png",
+        alt: "Shadi Al Milhem Logo شادي الملحم",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   structuredData: {
     "@context": "https://schema.org",
     "@type": "Person",

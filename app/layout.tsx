@@ -40,20 +40,7 @@ export const metadata: ExtendedMetadata = {
   ],
   icons: { icon: "/icon.ico" },
   creator: "Shadi Al Milhem",
-  openGraph: {
-    title: "Shadi Al Milhem (شادي الملحم) - Web Developer Portfolio",
-    description:
-      "Full Stack Web Developer and Software Engineer specializing in Next.js, UI/UX, and responsive design.",
-    url: "https://shadialmilhem.com",
-    images: [
-      {
-        url: "https://shadialmilhem.com/SH-logo.png",
-        alt: "Shadi Al Milhem Logo شادي الملحم",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
+
   twitter: {
     card: "summary_large_image",
     title: "Shadi Al Milhem (شادي الملحم) - Web Developer",
