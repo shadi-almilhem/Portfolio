@@ -35,7 +35,7 @@ export function CardProject({
             />
           </Link>
         </div>
-        <div className="flex flex-1 flex-col py-5">
+        <div className="flex flex-1 flex-col justify-between py-5">
           <h3 className="mb-2  text-xl font-semibold tracking-tight text-white">
             {heading}
           </h3>

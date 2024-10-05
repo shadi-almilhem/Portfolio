@@ -79,6 +79,11 @@ const config = {
         },
       },
       fontSize: {
+        "medium-18": "1rem",
+
+        "medium-20": "1.25rem",
+        "medium-28": "1.625rem", // 32px
+
         "medium-32": "2rem", // 32px
         "medium-40": "2.5rem", // 40px
         "medium-52": "3.25rem", // 52px

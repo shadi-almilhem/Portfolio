@@ -22,12 +22,7 @@ const services = [
     description: "Building robust, scalable, and wonderful web applications.",
     icon: <CodeXml strokeWidth={1.5} className="text-white/95" />,
   },
-  {
-    title: "Social Media Design",
-    description:
-      "Creating engaging and fast designs for social media platforms.",
-    icon: <Paintbrush strokeWidth={1.5} className="text-white/95" />,
-  },
+
   {
     title: "SEO Optimization",
     description:
@@ -44,13 +39,13 @@ function Services() {
       >
         My Services
       </h2>
-      <div className="grid  grid-cols-1 gap-4 px-8 md:w-4/5  md:px-52  lg:grid-cols-2 lg:gap-8 ">
+      <div className="grid  grid-cols-1 gap-4  p-6 sm:p-0 sm:p-0 md:w-4/5    lg:grid-cols-3 lg:gap-8 ">
         {services.map((service, index) => (
           <Link
             aria-label={service.title}
             href="/contact"
             key={index}
-            className="LinkContainer relative flex  flex-col  items-start gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
+            className="LinkContainer relative flex w-full  flex-col   gap-2 overflow-hidden	 rounded-lg border-[1px] border-white/10 bg-gradient-to-tl from-[#181818] from-30% to-[#101010]  p-6 shadow-xl	 shadow-primary/5 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 "
           >
             <div className="flex w-full  items-center justify-between">
               <div className="flex  items-center gap-2">

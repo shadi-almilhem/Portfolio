@@ -32,9 +32,9 @@ function Header() {
   return (
     <h1
       className={`text-glow gradient-text inline-block justify-center px-4 text-center font-semibold ${bodoni_moda.className}`}
-      style={{ fontSize: "clamp(40px, 6vw, 88px)" }}
+      style={{ fontSize: "clamp(32px, 6vw, 88px)" }}
     >
-      Shadi Al Milhem
+      I&apos;m Shadi Al Milhem
     </h1>
   );
 }

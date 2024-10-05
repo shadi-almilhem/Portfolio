@@ -26,24 +26,19 @@ function Projects() {
       if (projects.length === 0) {
         await fetchProjects();
       }
-      setVisibleProjects(projects.slice(0, 4));
+      setVisibleProjects(projects.slice(0, 3));
       setLoading(false);
     };
     loadProjects();
   }, [projects, fetchProjects]);
 
   return (
-    <section className="max-container relative mb-8 flex w-full flex-col items-center gap-16 rounded-b-[3rem] bg-gradient-to-t from-gray-300/10 via-primary/5  to-transparent p-8">
-      <h2
-        className={`${bodoni_moda.className} mx-auto text-medium-32 italic text-white md:text-medium-40 lg:text-medium-52`}
-      >
-        My Projects
-      </h2>
+    <section className="max-container relative mb-8 flex w-full flex-col items-center gap-8 rounded-b-[3rem] bg-gradient-to-t from-gray-300/10 via-primary/5  to-transparent p-8 pt-0">
       <div className="flex flex-col items-center gap-8">
-        <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2">
+        <div className="grid-col-1 grid justify-items-center gap-8 lg:grid-cols-3 lg:grid-rows-1">
           {loading ? (
             <>
-              {Array(4)
+              {Array(3)
                 .fill(null)
                 .map((_, index) => (
                   <SkeletonCard key={index} />

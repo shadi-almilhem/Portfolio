@@ -46,24 +46,35 @@ const Hero = () => {
     {
       key: "title",
       content: (
-        <h2 className="lg:medium-52 md:medium-40 medium-32 gradient-p mx-auto px-4 text-center">
-          <span className={`${bodoni_moda.className} gradient-p italic`}>
-            Your Favorite
+        <h2 className="lg:medium-52 md:medium-40 medium-20 gradient-p mx-auto mb-2 px-4 text-center leading-tight tracking-tighter ">
+          <span
+            className={`${bodoni_moda.className} text-glow gradient-p italic`}
+          >
+            Crafting Digital Masterpieces
           </span>
-          <br /> Front-End Developer
+          <br />{" "}
+          <span className="lg:medium-52 md:medium-40 medium-18  mx-auto mb-2 px-4 text-center leading-tight tracking-tighter ">
+            That Engage, Inspire, and Convert
+          </span>
         </h2>
       ),
     },
     {
       key: "description",
       content: (
-        <p className="lg:regular-24 md:regular-20 regular-16 mx-8 text-wrap text-center text-white/80 lg:w-[26rem]">
-          With 3 years experience.
-          <br /> Crafting
-          <span className={`text-glow gradient-text px-2 font-bold italic`}>
-            unforgettable
+        <p className="lg:regular-24 md:regular-20 regular-14 mx-8 mb-8  text-wrap text-center text-white/80 lg:max-w-[50rem]">
+          I&apos;m a passionate Front-End Developer with 3 years of experience.
+          <br />
+          <span className="text-nowrap">I transform ideas into</span>
+          <span
+            className={`text-glow gradient-text text-nowrap  px-2 font-bold italic`}
+          >
+            immersive digital experiences
           </span>
-          websites for your online identity.
+          <br />
+          <span className="text-wrap">
+            that leave a lasting impression and drive results.
+          </span>{" "}
         </p>
       ),
     },
@@ -78,9 +89,9 @@ const Hero = () => {
           >
             <Button
               aria-label="Get in Touch"
-              className="gradient-button bold-16 w-full rounded-full  py-5 text-white md:px-8"
+              className="gradient-button bold-16 w-full rounded-full py-5  text-white  md:px-8"
             >
-              Get in Touch <Mail className="ml-2 h-4 w-4" />
+              Create Something Together <Mail className="ml-2 h-4 w-4" />
             </Button>
           </Link>
 
@@ -105,7 +116,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="max-container relative z-40 mt-32 flex w-full flex-col flex-wrap items-center gap-6  md:mt-36 md:gap-4 lg:mt-48">
+    <section className="max-container relative z-40 mt-24 flex w-full flex-col flex-wrap items-center gap-2 sm:gap-8  md:mt-36 md:gap-6 lg:mt-32">
       <Suspense fallback={<div>Loading...</div>}>
         <DynamicGridPattern
           width={80}

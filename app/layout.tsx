@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./Header";
 import Cta from "./Cta";
 import Footer from "./Footer";
-import { nunito } from "@/fonts";
+import { inter } from "@/fonts";
 import { OpenPanelComponent } from "@openpanel/nextjs";
 
 interface ExtendedMetadata extends Metadata {
@@ -93,7 +93,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <body
-        className={`${nunito.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010]`}
+        className={`${inter.className} flex w-full flex-col items-center justify-center overflow-x-hidden bg-[#101010] antialiased`}
       >
         <Header />
         <OpenPanelComponent

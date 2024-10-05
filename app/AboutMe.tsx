@@ -34,9 +34,9 @@ export default function AboutMe() {
           />
         </div>
         <div className="flex flex-col gap-4  ">
-          <TextRevealByWord text="Hello! 👋 I’m Shadi, a passionate Information Technology student at the Syrian Virtual University, specializing in creating charming website & designs that perfectly reflect your brand’s vibe. 🚀🌟" />
-          <TextRevealByWord text="My designs don't just look good – they're crafted to turn clicks into sales. As a front-end magician, I bring your dreams to life with impactful designs. 🌟📜" />
-          <TextRevealByWord text="Ready to elevate your online presence? Let’s collaborate and create a mesmerizing digital experience for your audience. 📩" />
+          <TextRevealByWord text="Hello! 👋 I’m Shadi (الملحم شادي), a dedicated Information Technology student at the Syrian Virtual University. I specialize in creating captivating websites and designs that not only reflect your brand’s identity but also engage and convert visitors into loyal customers. 🚀🌟" />
+
+          <TextRevealByWord text="As a skilled front-end developer, I turn ideas into visually stunning, high-converting digital experiences. Whether you're looking to enhance your online presence or boost sales through web design, I’m here to bring your vision to life. Let’s collaborate to craft a digital masterpiece that resonates with your audience. 📩" />
         </div>
       </div>
     </section>

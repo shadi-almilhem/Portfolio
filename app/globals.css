@@ -45,14 +45,51 @@ select:-webkit-autofill:focus {
       box-shadow 0.3s ease-in-out;
   }
   .gradient-bg {
-    background: linear-gradient(180deg, #d080ff 10.41%, #b833ff 100%);
+    position: relative; /* Establishes a positioning context */
+    overflow: hidden; /* Ensures the pseudo-element stays within the bounds */
+    width: 40px; /* Set a width based on your icon size */
+    height: 40px; /* Set a height based on your icon size */
+  }
+
+  .gradient-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle,
+      hsl(278, 100%, 80%) 10%,
+      hsl(279, 100%, 60%) 80%
+    );
+    background-size: 180% 180%;
+    scale: 2;
+    animation: rotateGradient 10s linear infinite; /* Rotate animation */
+    z-index: 0; /* Places the gradient behind other content */
+  }
+
+  /* Animation for the radial gradient rotation */
+  @keyframes rotateGradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Ensure the content sits above the background */
+  .gradient-bg > * {
+    position: relative; /* Makes sure child elements are above the gradient */
+    z-index: 1; /* Higher z-index than the gradient */
   }
   @media (hover: hover) and (pointer: fine) {
     .gradient-button:hover {
       transform: translateY(-2px); /* Slight raise effect */
       box-shadow:
         0 10px 20px rgba(179, 42, 254, 0.4),
-        inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5); /* Inset Shadow */
+        inset 0px -1px 2px 0px rgba(0, 0, 0, 0.5); /* Inset Shadow */
     }
   }
   .gradient-s-button {
@@ -141,47 +178,64 @@ select:-webkit-autofill:focus {
   /* FONTS */
 
   .regular-24 {
-    @apply text-[24px] font-[400];
+    @apply text-2xl font-light tracking-tighter;
   }
 
   .regular-20 {
-    @apply text-[20px] font-[400];
+    @apply text-xl font-light tracking-tighter;
   }
 
   .regular-16 {
-    @apply text-[16px] font-[400];
+    @apply text-base font-light tracking-tighter;
   }
-
+  .regular-14 {
+    @apply text-sm font-light tracking-tighter;
+  }
+  /* Medium weight styles */
   .medium-14 {
-    @apply text-[14px] font-[600];
-  }
-  .medium-18 {
-    @apply text-[18px] font-[600];
-  }
-  .medium-16 {
-    @apply text-[16px] font-[600];
-  }
-  .medium-12 {
-    @apply text-[12px] font-[600];
+    @apply text-sm font-medium;
   }
 
+  .medium-18 {
+    @apply text-lg font-medium;
+  }
+
+  .medium-16 {
+    @apply text-base font-medium;
+  }
+
+  .medium-12 {
+    @apply text-xs font-medium;
+  }
+
+  /* Heading styles (for Bodoni Moda) */
   .medium-52 {
-    @apply text-[52px] font-[500] leading-[130%];
+    @apply text-medium-52 font-medium leading-snug;
   }
 
   .medium-40 {
-    @apply text-[40px] font-[500] leading-[130%];
+    @apply text-medium-40 font-medium leading-snug;
   }
 
   .medium-32 {
-    @apply text-[32px] font-[500] leading-[130%];
+    @apply text-medium-32 font-medium leading-snug;
+  }
+  .medium-28 {
+    @apply text-medium-28 font-medium leading-snug;
+  }
+  .medium-20 {
+    @apply text-medium-20 font-medium leading-snug;
+  }
+  .medium-18 {
+    @apply text-medium-18 font-medium leading-snug;
+  }
+  /* Bold styles */
+  .bold-16 {
+    @apply text-base font-semibold;
   }
 
-  .bold-16 {
-    @apply text-[16px] font-[600];
-  }
   .bold-14 {
-    @apply text-[14px] font-[500];
+    @apply text-sm font-semibold;
   }
   .text-glow {
     text-shadow: 0 0 20px rgba(219, 153, 255, 0.251);
